@@ -1,4 +1,1573 @@
-const TOPICS=[{"title": "Beowulf", "area": "Old English", "level": "Core", "description": "Exam-focused notes on Beowulf: context, key concepts, major facts, works and likely question angles."}, {"title": "Caedmon's Hymn", "area": "Old English", "level": "Core", "description": "Exam-focused notes on Caedmon's Hymn: context, key concepts, major facts, works and likely question angles."}, {"title": "The Dream of the Rood", "area": "Old English", "level": "Core", "description": "Exam-focused notes on The Dream of the Rood: context, key concepts, major facts, works and likely question angles."}, {"title": "Old English heroic poetry", "area": "Old English", "level": "Core", "description": "Exam-focused notes on Old English heroic poetry: context, key concepts, major facts, works and likely question angles."}, {"title": "Old English elegy", "area": "Old English", "level": "Core", "description": "Exam-focused notes on Old English elegy: context, key concepts, major facts, works and likely question angles."}, {"title": "Anglo-Saxon Chronicle", "area": "Old English", "level": "Core", "description": "Exam-focused notes on Anglo-Saxon Chronicle: context, key concepts, major facts, works and likely question angles."}, {"title": "Old English riddles", "area": "Old English", "level": "Core", "description": "Exam-focused notes on Old English riddles: context, key concepts, major facts, works and likely question angles."}, {"title": "Christianity in Old English literature", "area": "Old English", "level": "Core", "description": "Exam-focused notes on Christianity in Old English literature: context, key concepts, major facts, works and likely question angles."}, {"title": "Norman Conquest and literature", "area": "Middle English", "level": "Core", "description": "Exam-focused notes on Norman Conquest and literature: context, key concepts, major facts, works and likely question angles."}, {"title": "Chaucer's life and works", "area": "Middle English", "level": "Core", "description": "Exam-focused notes on Chaucer's life and works: context, key concepts, major facts, works and likely question angles."}, {"title": "General Prologue", "area": "Middle English", "level": "Core", "description": "Exam-focused notes on General Prologue: context, key concepts, major facts, works and likely question angles."}, {"title": "The Knight's Tale", "area": "Middle English", "level": "Core", "description": "Exam-focused notes on The Knight's Tale: context, key concepts, major facts, works and likely question angles."}, {"title": "The Miller's Tale", "area": "Middle English", "level": "Core", "description": "Exam-focused notes on The Miller's Tale: context, key concepts, major facts, works and likely question angles."}, {"title": "The Wife of Bath", "area": "Middle English", "level": "Core", "description": "Exam-focused notes on The Wife of Bath: context, key concepts, major facts, works and likely question angles."}, {"title": "Troilus and Criseyde", "area": "Middle English", "level": "Core", "description": "Exam-focused notes on Troilus and Criseyde: context, key concepts, major facts, works and likely question angles."}, {"title": "Everyman", "area": "Middle English", "level": "Core", "description": "Exam-focused notes on Everyman: context, key concepts, major facts, works and likely question angles."}, {"title": "Pearl", "area": "Middle English", "level": "Core", "description": "Exam-focused notes on Pearl: context, key concepts, major facts, works and likely question angles."}, {"title": "Sir Gawain and the Green Knight", "area": "Middle English", "level": "Core", "description": "Exam-focused notes on Sir Gawain and the Green Knight: context, key concepts, major facts, works and likely question angles."}, {"title": "Piers Plowman", "area": "Middle English", "level": "Core", "description": "Exam-focused notes on Piers Plowman: context, key concepts, major facts, works and likely question angles."}, {"title": "Middle English romance", "area": "Middle English", "level": "Core", "description": "Exam-focused notes on Middle English romance: context, key concepts, major facts, works and likely question angles."}, {"title": "English Renaissance", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on English Renaissance: context, key concepts, major facts, works and likely question angles."}, {"title": "Humanism", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on Humanism: context, key concepts, major facts, works and likely question angles."}, {"title": "Reformation and literature", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on Reformation and literature: context, key concepts, major facts, works and likely question angles."}, {"title": "Elizabethan literature", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on Elizabethan literature: context, key concepts, major facts, works and likely question angles."}, {"title": "Jacobean literature", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on Jacobean literature: context, key concepts, major facts, works and likely question angles."}, {"title": "University Wits", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on University Wits: context, key concepts, major facts, works and likely question angles."}, {"title": "Spenserian stanza", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on Spenserian stanza: context, key concepts, major facts, works and likely question angles."}, {"title": "Edmund Spenser", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on Edmund Spenser: context, key concepts, major facts, works and likely question angles."}, {"title": "The Faerie Queene", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on The Faerie Queene: context, key concepts, major facts, works and likely question angles."}, {"title": "Philip Sidney", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on Philip Sidney: context, key concepts, major facts, works and likely question angles."}, {"title": "Astrophil and Stella", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on Astrophil and Stella: context, key concepts, major facts, works and likely question angles."}, {"title": "Christopher Marlowe", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on Christopher Marlowe: context, key concepts, major facts, works and likely question angles."}, {"title": "Doctor Faustus", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on Doctor Faustus: context, key concepts, major facts, works and likely question angles."}, {"title": "Ben Jonson", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on Ben Jonson: context, key concepts, major facts, works and likely question angles."}, {"title": "Volpone", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on Volpone: context, key concepts, major facts, works and likely question angles."}, {"title": "Francis Bacon's essays", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on Francis Bacon's essays: context, key concepts, major facts, works and likely question angles."}, {"title": "Shakespeare chronology", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on Shakespeare chronology: context, key concepts, major facts, works and likely question angles."}, {"title": "Shakespearean comedy", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on Shakespearean comedy: context, key concepts, major facts, works and likely question angles."}, {"title": "Shakespearean tragedy", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on Shakespearean tragedy: context, key concepts, major facts, works and likely question angles."}, {"title": "Shakespearean history plays", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on Shakespearean history plays: context, key concepts, major facts, works and likely question angles."}, {"title": "Hamlet", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on Hamlet: context, key concepts, major facts, works and likely question angles."}, {"title": "Macbeth", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on Macbeth: context, key concepts, major facts, works and likely question angles."}, {"title": "Othello", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on Othello: context, key concepts, major facts, works and likely question angles."}, {"title": "King Lear", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on King Lear: context, key concepts, major facts, works and likely question angles."}, {"title": "Romeo and Juliet", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on Romeo and Juliet: context, key concepts, major facts, works and likely question angles."}, {"title": "The Tempest", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on The Tempest: context, key concepts, major facts, works and likely question angles."}, {"title": "Twelfth Night", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on Twelfth Night: context, key concepts, major facts, works and likely question angles."}, {"title": "As You Like It", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on As You Like It: context, key concepts, major facts, works and likely question angles."}, {"title": "A Midsummer Night's Dream", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on A Midsummer Night's Dream: context, key concepts, major facts, works and likely question angles."}, {"title": "The Merchant of Venice", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on The Merchant of Venice: context, key concepts, major facts, works and likely question angles."}, {"title": "Julius Caesar", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on Julius Caesar: context, key concepts, major facts, works and likely question angles."}, {"title": "Richard III", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on Richard III: context, key concepts, major facts, works and likely question angles."}, {"title": "Sonnets", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on Sonnets: context, key concepts, major facts, works and likely question angles."}, {"title": "Shakespeare's blank verse", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on Shakespeare's blank verse: context, key concepts, major facts, works and likely question angles."}, {"title": "Shakespearean dramatic technique", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on Shakespearean dramatic technique: context, key concepts, major facts, works and likely question angles."}, {"title": "Restoration drama", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Restoration drama: context, key concepts, major facts, works and likely question angles."}, {"title": "Comedy of manners", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Comedy of manners: context, key concepts, major facts, works and likely question angles."}, {"title": "John Dryden", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on John Dryden: context, key concepts, major facts, works and likely question angles."}, {"title": "Absalom and Achitophel", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Absalom and Achitophel: context, key concepts, major facts, works and likely question angles."}, {"title": "Aphra Behn", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Aphra Behn: context, key concepts, major facts, works and likely question angles."}, {"title": "The Rover", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on The Rover: context, key concepts, major facts, works and likely question angles."}, {"title": "Alexander Pope", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Alexander Pope: context, key concepts, major facts, works and likely question angles."}, {"title": "The Rape of the Lock", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on The Rape of the Lock: context, key concepts, major facts, works and likely question angles."}, {"title": "Jonathan Swift", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Jonathan Swift: context, key concepts, major facts, works and likely question angles."}, {"title": "Gulliver's Travels", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Gulliver's Travels: context, key concepts, major facts, works and likely question angles."}, {"title": "Samuel Johnson", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Samuel Johnson: context, key concepts, major facts, works and likely question angles."}, {"title": "Preface to Shakespeare", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Preface to Shakespeare: context, key concepts, major facts, works and likely question angles."}, {"title": "The Rambler", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on The Rambler: context, key concepts, major facts, works and likely question angles."}, {"title": "Daniel Defoe", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Daniel Defoe: context, key concepts, major facts, works and likely question angles."}, {"title": "Robinson Crusoe", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Robinson Crusoe: context, key concepts, major facts, works and likely question angles."}, {"title": "Henry Fielding", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Henry Fielding: context, key concepts, major facts, works and likely question angles."}, {"title": "Tom Jones", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Tom Jones: context, key concepts, major facts, works and likely question angles."}, {"title": "Laurence Sterne", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Laurence Sterne: context, key concepts, major facts, works and likely question angles."}, {"title": "Tristram Shandy", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Tristram Shandy: context, key concepts, major facts, works and likely question angles."}, {"title": "Richard Sheridan", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Richard Sheridan: context, key concepts, major facts, works and likely question angles."}, {"title": "The School for Scandal", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on The School for Scandal: context, key concepts, major facts, works and likely question angles."}, {"title": "Romanticism", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Romanticism: context, key concepts, major facts, works and likely question angles."}, {"title": "Lyrical Ballads", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Lyrical Ballads: context, key concepts, major facts, works and likely question angles."}, {"title": "Wordsworth's Preface", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Wordsworth's Preface: context, key concepts, major facts, works and likely question angles."}, {"title": "William Wordsworth", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on William Wordsworth: context, key concepts, major facts, works and likely question angles."}, {"title": "Tintern Abbey", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Tintern Abbey: context, key concepts, major facts, works and likely question angles."}, {"title": "Ode: Intimations of Immortality", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Ode: Intimations of Immortality: context, key concepts, major facts, works and likely question angles."}, {"title": "Samuel Taylor Coleridge", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Samuel Taylor Coleridge: context, key concepts, major facts, works and likely question angles."}, {"title": "The Rime of the Ancient Mariner", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on The Rime of the Ancient Mariner: context, key concepts, major facts, works and likely question angles."}, {"title": "Kubla Khan", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Kubla Khan: context, key concepts, major facts, works and likely question angles."}, {"title": "Biographia Literaria", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Biographia Literaria: context, key concepts, major facts, works and likely question angles."}, {"title": "Lord Byron", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Lord Byron: context, key concepts, major facts, works and likely question angles."}, {"title": "Childe Harold", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Childe Harold: context, key concepts, major facts, works and likely question angles."}, {"title": "Percy Bysshe Shelley", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Percy Bysshe Shelley: context, key concepts, major facts, works and likely question angles."}, {"title": "Ode to the West Wind", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Ode to the West Wind: context, key concepts, major facts, works and likely question angles."}, {"title": "To a Skylark", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on To a Skylark: context, key concepts, major facts, works and likely question angles."}, {"title": "John Keats", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on John Keats: context, key concepts, major facts, works and likely question angles."}, {"title": "Ode to a Nightingale", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Ode to a Nightingale: context, key concepts, major facts, works and likely question angles."}, {"title": "Ode on a Grecian Urn", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Ode on a Grecian Urn: context, key concepts, major facts, works and likely question angles."}, {"title": "Negative Capability", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Negative Capability: context, key concepts, major facts, works and likely question angles."}, {"title": "Mary Shelley", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Mary Shelley: context, key concepts, major facts, works and likely question angles."}, {"title": "Frankenstein", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Frankenstein: context, key concepts, major facts, works and likely question angles."}, {"title": "Victorian literature", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Victorian literature: context, key concepts, major facts, works and likely question angles."}, {"title": "Industrial Revolution and literature", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Industrial Revolution and literature: context, key concepts, major facts, works and likely question angles."}, {"title": "Alfred Tennyson", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Alfred Tennyson: context, key concepts, major facts, works and likely question angles."}, {"title": "In Memoriam", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on In Memoriam: context, key concepts, major facts, works and likely question angles."}, {"title": "Robert Browning", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Robert Browning: context, key concepts, major facts, works and likely question angles."}, {"title": "My Last Duchess", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on My Last Duchess: context, key concepts, major facts, works and likely question angles."}, {"title": "Dramatic monologue", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Dramatic monologue: context, key concepts, major facts, works and likely question angles."}, {"title": "Matthew Arnold", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Matthew Arnold: context, key concepts, major facts, works and likely question angles."}, {"title": "Dover Beach", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Dover Beach: context, key concepts, major facts, works and likely question angles."}, {"title": "Christina Rossetti", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Christina Rossetti: context, key concepts, major facts, works and likely question angles."}, {"title": "Goblin Market", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Goblin Market: context, key concepts, major facts, works and likely question angles."}, {"title": "Thomas Hardy", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Thomas Hardy: context, key concepts, major facts, works and likely question angles."}, {"title": "Tess of the d'Urbervilles", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Tess of the d'Urbervilles: context, key concepts, major facts, works and likely question angles."}, {"title": "George Eliot", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on George Eliot: context, key concepts, major facts, works and likely question angles."}, {"title": "Middlemarch", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Middlemarch: context, key concepts, major facts, works and likely question angles."}, {"title": "Charles Dickens", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Charles Dickens: context, key concepts, major facts, works and likely question angles."}, {"title": "Great Expectations", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Great Expectations: context, key concepts, major facts, works and likely question angles."}, {"title": "Charlotte Bronte", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Charlotte Bronte: context, key concepts, major facts, works and likely question angles."}, {"title": "Jane Eyre", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Jane Eyre: context, key concepts, major facts, works and likely question angles."}, {"title": "Emily Bronte", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Emily Bronte: context, key concepts, major facts, works and likely question angles."}, {"title": "Wuthering Heights", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Wuthering Heights: context, key concepts, major facts, works and likely question angles."}, {"title": "Oscar Wilde", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Oscar Wilde: context, key concepts, major facts, works and likely question angles."}, {"title": "The Importance of Being Earnest", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on The Importance of Being Earnest: context, key concepts, major facts, works and likely question angles."}, {"title": "Modernism", "area": "Modern", "level": "Core", "description": "Exam-focused notes on Modernism: context, key concepts, major facts, works and likely question angles."}, {"title": "Modernist poetry", "area": "Modern", "level": "Core", "description": "Exam-focused notes on Modernist poetry: context, key concepts, major facts, works and likely question angles."}, {"title": "T. S. Eliot", "area": "Modern", "level": "Core", "description": "Exam-focused notes on T. S. Eliot: context, key concepts, major facts, works and likely question angles."}, {"title": "The Waste Land", "area": "Modern", "level": "Core", "description": "Exam-focused notes on The Waste Land: context, key concepts, major facts, works and likely question angles."}, {"title": "Tradition and the Individual Talent", "area": "Modern", "level": "Core", "description": "Exam-focused notes on Tradition and the Individual Talent: context, key concepts, major facts, works and likely question angles."}, {"title": "The Love Song of J. Alfred Prufrock", "area": "Modern", "level": "Core", "description": "Exam-focused notes on The Love Song of J. Alfred Prufrock: context, key concepts, major facts, works and likely question angles."}, {"title": "W. B. Yeats", "area": "Modern", "level": "Core", "description": "Exam-focused notes on W. B. Yeats: context, key concepts, major facts, works and likely question angles."}, {"title": "The Second Coming", "area": "Modern", "level": "Core", "description": "Exam-focused notes on The Second Coming: context, key concepts, major facts, works and likely question angles."}, {"title": "Ezra Pound", "area": "Modern", "level": "Core", "description": "Exam-focused notes on Ezra Pound: context, key concepts, major facts, works and likely question angles."}, {"title": "Hugh Selwyn Mauberley", "area": "Modern", "level": "Core", "description": "Exam-focused notes on Hugh Selwyn Mauberley: context, key concepts, major facts, works and likely question angles."}, {"title": "James Joyce", "area": "Modern", "level": "Core", "description": "Exam-focused notes on James Joyce: context, key concepts, major facts, works and likely question angles."}, {"title": "Ulysses", "area": "Modern", "level": "Core", "description": "Exam-focused notes on Ulysses: context, key concepts, major facts, works and likely question angles."}, {"title": "Virginia Woolf", "area": "Modern", "level": "Core", "description": "Exam-focused notes on Virginia Woolf: context, key concepts, major facts, works and likely question angles."}, {"title": "Mrs Dalloway", "area": "Modern", "level": "Core", "description": "Exam-focused notes on Mrs Dalloway: context, key concepts, major facts, works and likely question angles."}, {"title": "To the Lighthouse", "area": "Modern", "level": "Core", "description": "Exam-focused notes on To the Lighthouse: context, key concepts, major facts, works and likely question angles."}, {"title": "D. H. Lawrence", "area": "Modern", "level": "Core", "description": "Exam-focused notes on D. H. Lawrence: context, key concepts, major facts, works and likely question angles."}, {"title": "Sons and Lovers", "area": "Modern", "level": "Core", "description": "Exam-focused notes on Sons and Lovers: context, key concepts, major facts, works and likely question angles."}, {"title": "E. M. Forster", "area": "Modern", "level": "Core", "description": "Exam-focused notes on E. M. Forster: context, key concepts, major facts, works and likely question angles."}, {"title": "A Passage to India", "area": "Modern", "level": "Core", "description": "Exam-focused notes on A Passage to India: context, key concepts, major facts, works and likely question angles."}, {"title": "George Bernard Shaw", "area": "Modern", "level": "Core", "description": "Exam-focused notes on George Bernard Shaw: context, key concepts, major facts, works and likely question angles."}, {"title": "Arms and the Man", "area": "Modern", "level": "Core", "description": "Exam-focused notes on Arms and the Man: context, key concepts, major facts, works and likely question angles."}, {"title": "Samuel Beckett", "area": "Modern", "level": "Core", "description": "Exam-focused notes on Samuel Beckett: context, key concepts, major facts, works and likely question angles."}, {"title": "Waiting for Godot", "area": "Modern", "level": "Core", "description": "Exam-focused notes on Waiting for Godot: context, key concepts, major facts, works and likely question angles."}, {"title": "Postcolonial literature", "area": "Postwar & Contemporary", "level": "Core", "description": "Exam-focused notes on Postcolonial literature: context, key concepts, major facts, works and likely question angles."}, {"title": "Philip Larkin", "area": "Postwar & Contemporary", "level": "Core", "description": "Exam-focused notes on Philip Larkin: context, key concepts, major facts, works and likely question angles."}, {"title": "Ted Hughes", "area": "Postwar & Contemporary", "level": "Core", "description": "Exam-focused notes on Ted Hughes: context, key concepts, major facts, works and likely question angles."}, {"title": "Seamus Heaney", "area": "Postwar & Contemporary", "level": "Core", "description": "Exam-focused notes on Seamus Heaney: context, key concepts, major facts, works and likely question angles."}, {"title": "Derek Walcott", "area": "Postwar & Contemporary", "level": "Core", "description": "Exam-focused notes on Derek Walcott: context, key concepts, major facts, works and likely question angles."}, {"title": "Salman Rushdie", "area": "Postwar & Contemporary", "level": "Core", "description": "Exam-focused notes on Salman Rushdie: context, key concepts, major facts, works and likely question angles."}, {"title": "Midnight's Children", "area": "Postwar & Contemporary", "level": "Core", "description": "Exam-focused notes on Midnight's Children: context, key concepts, major facts, works and likely question angles."}, {"title": "Kazuo Ishiguro", "area": "Postwar & Contemporary", "level": "Core", "description": "Exam-focused notes on Kazuo Ishiguro: context, key concepts, major facts, works and likely question angles."}, {"title": "Never Let Me Go", "area": "Postwar & Contemporary", "level": "Core", "description": "Exam-focused notes on Never Let Me Go: context, key concepts, major facts, works and likely question angles."}, {"title": "Ian McEwan", "area": "Postwar & Contemporary", "level": "Core", "description": "Exam-focused notes on Ian McEwan: context, key concepts, major facts, works and likely question angles."}, {"title": "Zadie Smith", "area": "Postwar & Contemporary", "level": "Core", "description": "Exam-focused notes on Zadie Smith: context, key concepts, major facts, works and likely question angles."}, {"title": "Jeanette Winterson", "area": "Postwar & Contemporary", "level": "Core", "description": "Exam-focused notes on Jeanette Winterson: context, key concepts, major facts, works and likely question angles."}, {"title": "Contemporary British poetry", "area": "Postwar & Contemporary", "level": "Core", "description": "Exam-focused notes on Contemporary British poetry: context, key concepts, major facts, works and likely question angles."}, {"title": "Multicultural literature", "area": "Postwar & Contemporary", "level": "Core", "description": "Exam-focused notes on Multicultural literature: context, key concepts, major facts, works and likely question angles."}, {"title": "Diaspora writing", "area": "Postwar & Contemporary", "level": "Core", "description": "Exam-focused notes on Diaspora writing: context, key concepts, major facts, works and likely question angles."}, {"title": "American Renaissance", "area": "American", "level": "Core", "description": "Exam-focused notes on American Renaissance: context, key concepts, major facts, works and likely question angles."}, {"title": "Ralph Waldo Emerson", "area": "American", "level": "Core", "description": "Exam-focused notes on Ralph Waldo Emerson: context, key concepts, major facts, works and likely question angles."}, {"title": "Self-Reliance", "area": "American", "level": "Core", "description": "Exam-focused notes on Self-Reliance: context, key concepts, major facts, works and likely question angles."}, {"title": "Henry David Thoreau", "area": "American", "level": "Core", "description": "Exam-focused notes on Henry David Thoreau: context, key concepts, major facts, works and likely question angles."}, {"title": "Walden", "area": "American", "level": "Core", "description": "Exam-focused notes on Walden: context, key concepts, major facts, works and likely question angles."}, {"title": "Edgar Allan Poe", "area": "American", "level": "Core", "description": "Exam-focused notes on Edgar Allan Poe: context, key concepts, major facts, works and likely question angles."}, {"title": "The Raven", "area": "American", "level": "Core", "description": "Exam-focused notes on The Raven: context, key concepts, major facts, works and likely question angles."}, {"title": "Nathaniel Hawthorne", "area": "American", "level": "Core", "description": "Exam-focused notes on Nathaniel Hawthorne: context, key concepts, major facts, works and likely question angles."}, {"title": "The Scarlet Letter", "area": "American", "level": "Core", "description": "Exam-focused notes on The Scarlet Letter: context, key concepts, major facts, works and likely question angles."}, {"title": "Herman Melville", "area": "American", "level": "Core", "description": "Exam-focused notes on Herman Melville: context, key concepts, major facts, works and likely question angles."}, {"title": "Moby-Dick", "area": "American", "level": "Core", "description": "Exam-focused notes on Moby-Dick: context, key concepts, major facts, works and likely question angles."}, {"title": "Walt Whitman", "area": "American", "level": "Core", "description": "Exam-focused notes on Walt Whitman: context, key concepts, major facts, works and likely question angles."}, {"title": "Leaves of Grass", "area": "American", "level": "Core", "description": "Exam-focused notes on Leaves of Grass: context, key concepts, major facts, works and likely question angles."}, {"title": "Emily Dickinson", "area": "American", "level": "Core", "description": "Exam-focused notes on Emily Dickinson: context, key concepts, major facts, works and likely question angles."}, {"title": "Robert Frost", "area": "American", "level": "Core", "description": "Exam-focused notes on Robert Frost: context, key concepts, major facts, works and likely question angles."}, {"title": "The Road Not Taken", "area": "American", "level": "Core", "description": "Exam-focused notes on The Road Not Taken: context, key concepts, major facts, works and likely question angles."}, {"title": "T. S. Eliot and American modernism", "area": "American", "level": "Core", "description": "Exam-focused notes on T. S. Eliot and American modernism: context, key concepts, major facts, works and likely question angles."}, {"title": "F. Scott Fitzgerald", "area": "American", "level": "Core", "description": "Exam-focused notes on F. Scott Fitzgerald: context, key concepts, major facts, works and likely question angles."}, {"title": "The Great Gatsby", "area": "American", "level": "Core", "description": "Exam-focused notes on The Great Gatsby: context, key concepts, major facts, works and likely question angles."}, {"title": "Ernest Hemingway", "area": "American", "level": "Core", "description": "Exam-focused notes on Ernest Hemingway: context, key concepts, major facts, works and likely question angles."}, {"title": "The Old Man and the Sea", "area": "American", "level": "Core", "description": "Exam-focused notes on The Old Man and the Sea: context, key concepts, major facts, works and likely question angles."}, {"title": "Toni Morrison", "area": "American", "level": "Core", "description": "Exam-focused notes on Toni Morrison: context, key concepts, major facts, works and likely question angles."}, {"title": "Beloved", "area": "American", "level": "Core", "description": "Exam-focused notes on Beloved: context, key concepts, major facts, works and likely question angles."}, {"title": "Arthur Miller", "area": "American", "level": "Core", "description": "Exam-focused notes on Arthur Miller: context, key concepts, major facts, works and likely question angles."}, {"title": "Death of a Salesman", "area": "American", "level": "Core", "description": "Exam-focused notes on Death of a Salesman: context, key concepts, major facts, works and likely question angles."}, {"title": "Tennessee Williams", "area": "American", "level": "Core", "description": "Exam-focused notes on Tennessee Williams: context, key concepts, major facts, works and likely question angles."}, {"title": "A Streetcar Named Desire", "area": "American", "level": "Core", "description": "Exam-focused notes on A Streetcar Named Desire: context, key concepts, major facts, works and likely question angles."}, {"title": "Indian English literature", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Indian English literature: context, key concepts, major facts, works and likely question angles."}, {"title": "Raja Rao", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Raja Rao: context, key concepts, major facts, works and likely question angles."}, {"title": "Kanthapura", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Kanthapura: context, key concepts, major facts, works and likely question angles."}, {"title": "R. K. Narayan", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on R. K. Narayan: context, key concepts, major facts, works and likely question angles."}, {"title": "The Guide", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on The Guide: context, key concepts, major facts, works and likely question angles."}, {"title": "Mulk Raj Anand", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Mulk Raj Anand: context, key concepts, major facts, works and likely question angles."}, {"title": "Untouchable", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Untouchable: context, key concepts, major facts, works and likely question angles."}, {"title": "Anita Desai", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Anita Desai: context, key concepts, major facts, works and likely question angles."}, {"title": "Clear Light of Day", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Clear Light of Day: context, key concepts, major facts, works and likely question angles."}, {"title": "Kamala Markandaya", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Kamala Markandaya: context, key concepts, major facts, works and likely question angles."}, {"title": "Nectar in a Sieve", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Nectar in a Sieve: context, key concepts, major facts, works and likely question angles."}, {"title": "Arundhati Roy", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Arundhati Roy: context, key concepts, major facts, works and likely question angles."}, {"title": "The God of Small Things", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on The God of Small Things: context, key concepts, major facts, works and likely question angles."}, {"title": "Amitav Ghosh", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Amitav Ghosh: context, key concepts, major facts, works and likely question angles."}, {"title": "The Shadow Lines", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on The Shadow Lines: context, key concepts, major facts, works and likely question angles."}, {"title": "Vikram Seth", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Vikram Seth: context, key concepts, major facts, works and likely question angles."}, {"title": "A Suitable Boy", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on A Suitable Boy: context, key concepts, major facts, works and likely question angles."}, {"title": "Salman Rushdie and India", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Salman Rushdie and India: context, key concepts, major facts, works and likely question angles."}, {"title": "Nissim Ezekiel", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Nissim Ezekiel: context, key concepts, major facts, works and likely question angles."}, {"title": "Night of the Scorpion", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Night of the Scorpion: context, key concepts, major facts, works and likely question angles."}, {"title": "A. K. Ramanujan", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on A. K. Ramanujan: context, key concepts, major facts, works and likely question angles."}, {"title": "Obituary", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Obituary: context, key concepts, major facts, works and likely question angles."}, {"title": "Kamala Das", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Kamala Das: context, key concepts, major facts, works and likely question angles."}, {"title": "An Introduction", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on An Introduction: context, key concepts, major facts, works and likely question angles."}, {"title": "Jayanta Mahapatra", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Jayanta Mahapatra: context, key concepts, major facts, works and likely question angles."}, {"title": "Toru Dutt", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Toru Dutt: context, key concepts, major facts, works and likely question angles."}, {"title": "Sarojini Naidu", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Sarojini Naidu: context, key concepts, major facts, works and likely question angles."}, {"title": "Mahesh Dattani", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Mahesh Dattani: context, key concepts, major facts, works and likely question angles."}, {"title": "Final Solutions", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Final Solutions: context, key concepts, major facts, works and likely question angles."}, {"title": "Girish Karnad", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Girish Karnad: context, key concepts, major facts, works and likely question angles."}, {"title": "Tughlaq", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Tughlaq: context, key concepts, major facts, works and likely question angles."}, {"title": "Plato", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Plato: context, key concepts, major facts, works and likely question angles."}, {"title": "Aristotle", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Aristotle: context, key concepts, major facts, works and likely question angles."}, {"title": "Poetics", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Poetics: context, key concepts, major facts, works and likely question angles."}, {"title": "Catharsis", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Catharsis: context, key concepts, major facts, works and likely question angles."}, {"title": "Hamartia", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Hamartia: context, key concepts, major facts, works and likely question angles."}, {"title": "Longinus", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Longinus: context, key concepts, major facts, works and likely question angles."}, {"title": "On the Sublime", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on On the Sublime: context, key concepts, major facts, works and likely question angles."}, {"title": "Horace", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Horace: context, key concepts, major facts, works and likely question angles."}, {"title": "Sidney's Defence of Poesy", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Sidney's Defence of Poesy: context, key concepts, major facts, works and likely question angles."}, {"title": "Dryden's criticism", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Dryden's criticism: context, key concepts, major facts, works and likely question angles."}, {"title": "Samuel Johnson's criticism", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Samuel Johnson's criticism: context, key concepts, major facts, works and likely question angles."}, {"title": "Wordsworth's poetic theory", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Wordsworth's poetic theory: context, key concepts, major facts, works and likely question angles."}, {"title": "Coleridge's imagination", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Coleridge's imagination: context, key concepts, major facts, works and likely question angles."}, {"title": "Matthew Arnold", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Matthew Arnold: context, key concepts, major facts, works and likely question angles."}, {"title": "Touchstone method", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Touchstone method: context, key concepts, major facts, works and likely question angles."}, {"title": "T. S. Eliot's criticism", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on T. S. Eliot's criticism: context, key concepts, major facts, works and likely question angles."}, {"title": "I. A. Richards", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on I. A. Richards: context, key concepts, major facts, works and likely question angles."}, {"title": "Practical Criticism", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Practical Criticism: context, key concepts, major facts, works and likely question angles."}, {"title": "New Criticism", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on New Criticism: context, key concepts, major facts, works and likely question angles."}, {"title": "Cleanth Brooks", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Cleanth Brooks: context, key concepts, major facts, works and likely question angles."}, {"title": "W. K. Wimsatt", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on W. K. Wimsatt: context, key concepts, major facts, works and likely question angles."}, {"title": "Intentional Fallacy", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Intentional Fallacy: context, key concepts, major facts, works and likely question angles."}, {"title": "Structuralism", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Structuralism: context, key concepts, major facts, works and likely question angles."}, {"title": "Ferdinand de Saussure", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Ferdinand de Saussure: context, key concepts, major facts, works and likely question angles."}, {"title": "Russian Formalism", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Russian Formalism: context, key concepts, major facts, works and likely question angles."}, {"title": "Viktor Shklovsky", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Viktor Shklovsky: context, key concepts, major facts, works and likely question angles."}, {"title": "Roland Barthes", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Roland Barthes: context, key concepts, major facts, works and likely question angles."}, {"title": "Post-structuralism", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Post-structuralism: context, key concepts, major facts, works and likely question angles."}, {"title": "Jacques Derrida", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Jacques Derrida: context, key concepts, major facts, works and likely question angles."}, {"title": "Deconstruction", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Deconstruction: context, key concepts, major facts, works and likely question angles."}, {"title": "Michel Foucault", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Michel Foucault: context, key concepts, major facts, works and likely question angles."}, {"title": "Reader-response theory", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Reader-response theory: context, key concepts, major facts, works and likely question angles."}, {"title": "Wolfgang Iser", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Wolfgang Iser: context, key concepts, major facts, works and likely question angles."}, {"title": "Stanley Fish", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Stanley Fish: context, key concepts, major facts, works and likely question angles."}, {"title": "Psychoanalytic criticism", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Psychoanalytic criticism: context, key concepts, major facts, works and likely question angles."}, {"title": "Sigmund Freud", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Sigmund Freud: context, key concepts, major facts, works and likely question angles."}, {"title": "Carl Jung", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Carl Jung: context, key concepts, major facts, works and likely question angles."}, {"title": "Feminist criticism", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Feminist criticism: context, key concepts, major facts, works and likely question angles."}, {"title": "Elaine Showalter", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Elaine Showalter: context, key concepts, major facts, works and likely question angles."}, {"title": "Simone de Beauvoir", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Simone de Beauvoir: context, key concepts, major facts, works and likely question angles."}, {"title": "Postcolonial criticism", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Postcolonial criticism: context, key concepts, major facts, works and likely question angles."}, {"title": "Edward Said", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Edward Said: context, key concepts, major facts, works and likely question angles."}, {"title": "Gayatri Spivak", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Gayatri Spivak: context, key concepts, major facts, works and likely question angles."}, {"title": "Homi K. Bhabha", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Homi K. Bhabha: context, key concepts, major facts, works and likely question angles."}, {"title": "Marxist criticism", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Marxist criticism: context, key concepts, major facts, works and likely question angles."}, {"title": "Georg Lukacs", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Georg Lukacs: context, key concepts, major facts, works and likely question angles."}, {"title": "Antonio Gramsci", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Antonio Gramsci: context, key concepts, major facts, works and likely question angles."}, {"title": "Cultural Studies", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Cultural Studies: context, key concepts, major facts, works and likely question angles."}, {"title": "Raymond Williams", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Raymond Williams: context, key concepts, major facts, works and likely question angles."}, {"title": "Queer theory", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Queer theory: context, key concepts, major facts, works and likely question angles."}, {"title": "Judith Butler", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Judith Butler: context, key concepts, major facts, works and likely question angles."}, {"title": "Ecocriticism", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Ecocriticism: context, key concepts, major facts, works and likely question angles."}, {"title": "Allegory", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Allegory: context, key concepts, major facts, works and likely question angles."}, {"title": "Alliteration", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Alliteration: context, key concepts, major facts, works and likely question angles."}, {"title": "Assonance", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Assonance: context, key concepts, major facts, works and likely question angles."}, {"title": "Blank verse", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Blank verse: context, key concepts, major facts, works and likely question angles."}, {"title": "Caesura", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Caesura: context, key concepts, major facts, works and likely question angles."}, {"title": "Couplet", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Couplet: context, key concepts, major facts, works and likely question angles."}, {"title": "Elegy", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Elegy: context, key concepts, major facts, works and likely question angles."}, {"title": "Epic", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Epic: context, key concepts, major facts, works and likely question angles."}, {"title": "Epigram", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Epigram: context, key concepts, major facts, works and likely question angles."}, {"title": "Free verse", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Free verse: context, key concepts, major facts, works and likely question angles."}, {"title": "Haiku", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Haiku: context, key concepts, major facts, works and likely question angles."}, {"title": "Heroic couplet", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Heroic couplet: context, key concepts, major facts, works and likely question angles."}, {"title": "Iambic pentameter", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Iambic pentameter: context, key concepts, major facts, works and likely question angles."}, {"title": "Irony", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Irony: context, key concepts, major facts, works and likely question angles."}, {"title": "Metaphor", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Metaphor: context, key concepts, major facts, works and likely question angles."}, {"title": "Metonymy", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Metonymy: context, key concepts, major facts, works and likely question angles."}, {"title": "Ode", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Ode: context, key concepts, major facts, works and likely question angles."}, {"title": "Oxymoron", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Oxymoron: context, key concepts, major facts, works and likely question angles."}, {"title": "Paradox", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Paradox: context, key concepts, major facts, works and likely question angles."}, {"title": "Personification", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Personification: context, key concepts, major facts, works and likely question angles."}, {"title": "Pun", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Pun: context, key concepts, major facts, works and likely question angles."}, {"title": "Satire", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Satire: context, key concepts, major facts, works and likely question angles."}, {"title": "Soliloquy", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Soliloquy: context, key concepts, major facts, works and likely question angles."}, {"title": "Sonnet", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Sonnet: context, key concepts, major facts, works and likely question angles."}, {"title": "Spenserian stanza", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Spenserian stanza: context, key concepts, major facts, works and likely question angles."}, {"title": "Stream of consciousness", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Stream of consciousness: context, key concepts, major facts, works and likely question angles."}, {"title": "Symbolism", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Symbolism: context, key concepts, major facts, works and likely question angles."}, {"title": "Synecdoche", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Synecdoche: context, key concepts, major facts, works and likely question angles."}, {"title": "Tragedy", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Tragedy: context, key concepts, major facts, works and likely question angles."}, {"title": "Tragic flaw", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Tragic flaw: context, key concepts, major facts, works and likely question angles."}, {"title": "Unreliable narrator", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Unreliable narrator: context, key concepts, major facts, works and likely question angles."}, {"title": "Dramatic monologue", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Dramatic monologue: context, key concepts, major facts, works and likely question angles."}, {"title": "Interior monologue", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Interior monologue: context, key concepts, major facts, works and likely question angles."}, {"title": "Frame narrative", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Frame narrative: context, key concepts, major facts, works and likely question angles."}, {"title": "Bildungsroman", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Bildungsroman: context, key concepts, major facts, works and likely question angles."}, {"title": "Picaresque novel", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Picaresque novel: context, key concepts, major facts, works and likely question angles."}, {"title": "Gothic novel", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Gothic novel: context, key concepts, major facts, works and likely question angles."}, {"title": "Novel of manners", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Novel of manners: context, key concepts, major facts, works and likely question angles."}, {"title": "Magic realism", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Magic realism: context, key concepts, major facts, works and likely question angles."}, {"title": "Epistolary novel", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Epistolary novel: context, key concepts, major facts, works and likely question angles."}, {"title": "British Literature: Chronology", "area": "British Literature", "level": "Revision", "description": "A structured revision module for British Literature, focused on chronology."}, {"title": "British Literature: Major Movements", "area": "British Literature", "level": "Revision", "description": "A structured revision module for British Literature, focused on major movements."}, {"title": "British Literature: Key Terminology", "area": "British Literature", "level": "Revision", "description": "A structured revision module for British Literature, focused on key terminology."}, {"title": "British Literature: Important Authors", "area": "British Literature", "level": "Revision", "description": "A structured revision module for British Literature, focused on important authors."}, {"title": "British Literature: Major Works", "area": "British Literature", "level": "Revision", "description": "A structured revision module for British Literature, focused on major works."}, {"title": "British Literature: Critical Approaches", "area": "British Literature", "level": "Revision", "description": "A structured revision module for British Literature, focused on critical approaches."}, {"title": "British Literature: Frequently Confused Facts", "area": "British Literature", "level": "Revision", "description": "A structured revision module for British Literature, focused on frequently confused facts."}, {"title": "British Literature: Exam Revision Checklist", "area": "British Literature", "level": "Revision", "description": "A structured revision module for British Literature, focused on exam revision checklist."}, {"title": "American Literature: Chronology", "area": "American Literature", "level": "Revision", "description": "A structured revision module for American Literature, focused on chronology."}, {"title": "American Literature: Major Movements", "area": "American Literature", "level": "Revision", "description": "A structured revision module for American Literature, focused on major movements."}, {"title": "American Literature: Key Terminology", "area": "American Literature", "level": "Revision", "description": "A structured revision module for American Literature, focused on key terminology."}, {"title": "American Literature: Important Authors", "area": "American Literature", "level": "Revision", "description": "A structured revision module for American Literature, focused on important authors."}, {"title": "American Literature: Major Works", "area": "American Literature", "level": "Revision", "description": "A structured revision module for American Literature, focused on major works."}, {"title": "American Literature: Critical Approaches", "area": "American Literature", "level": "Revision", "description": "A structured revision module for American Literature, focused on critical approaches."}, {"title": "American Literature: Frequently Confused Facts", "area": "American Literature", "level": "Revision", "description": "A structured revision module for American Literature, focused on frequently confused facts."}, {"title": "American Literature: Exam Revision Checklist", "area": "American Literature", "level": "Revision", "description": "A structured revision module for American Literature, focused on exam revision checklist."}, {"title": "Indian Writing in English: Chronology", "area": "Indian Writing in English", "level": "Revision", "description": "A structured revision module for Indian Writing in English, focused on chronology."}, {"title": "Indian Writing in English: Major Movements", "area": "Indian Writing in English", "level": "Revision", "description": "A structured revision module for Indian Writing in English, focused on major movements."}, {"title": "Indian Writing in English: Key Terminology", "area": "Indian Writing in English", "level": "Revision", "description": "A structured revision module for Indian Writing in English, focused on key terminology."}, {"title": "Indian Writing in English: Important Authors", "area": "Indian Writing in English", "level": "Revision", "description": "A structured revision module for Indian Writing in English, focused on important authors."}, {"title": "Indian Writing in English: Major Works", "area": "Indian Writing in English", "level": "Revision", "description": "A structured revision module for Indian Writing in English, focused on major works."}, {"title": "Indian Writing in English: Critical Approaches", "area": "Indian Writing in English", "level": "Revision", "description": "A structured revision module for Indian Writing in English, focused on critical approaches."}, {"title": "Indian Writing in English: Frequently Confused Facts", "area": "Indian Writing in English", "level": "Revision", "description": "A structured revision module for Indian Writing in English, focused on frequently confused facts."}, {"title": "Indian Writing in English: Exam Revision Checklist", "area": "Indian Writing in English", "level": "Revision", "description": "A structured revision module for Indian Writing in English, focused on exam revision checklist."}, {"title": "Literary Theory: Chronology", "area": "Literary Theory", "level": "Revision", "description": "A structured revision module for Literary Theory, focused on chronology."}, {"title": "Literary Theory: Major Movements", "area": "Literary Theory", "level": "Revision", "description": "A structured revision module for Literary Theory, focused on major movements."}, {"title": "Literary Theory: Key Terminology", "area": "Literary Theory", "level": "Revision", "description": "A structured revision module for Literary Theory, focused on key terminology."}, {"title": "Literary Theory: Important Authors", "area": "Literary Theory", "level": "Revision", "description": "A structured revision module for Literary Theory, focused on important authors."}, {"title": "Literary Theory: Major Works", "area": "Literary Theory", "level": "Revision", "description": "A structured revision module for Literary Theory, focused on major works."}, {"title": "Literary Theory: Critical Approaches", "area": "Literary Theory", "level": "Revision", "description": "A structured revision module for Literary Theory, focused on critical approaches."}, {"title": "Literary Theory: Frequently Confused Facts", "area": "Literary Theory", "level": "Revision", "description": "A structured revision module for Literary Theory, focused on frequently confused facts."}, {"title": "Literary Theory: Exam Revision Checklist", "area": "Literary Theory", "level": "Revision", "description": "A structured revision module for Literary Theory, focused on exam revision checklist."}, {"title": "Drama: Chronology", "area": "Drama", "level": "Revision", "description": "A structured revision module for Drama, focused on chronology."}, {"title": "Drama: Major Movements", "area": "Drama", "level": "Revision", "description": "A structured revision module for Drama, focused on major movements."}, {"title": "Drama: Key Terminology", "area": "Drama", "level": "Revision", "description": "A structured revision module for Drama, focused on key terminology."}, {"title": "Drama: Important Authors", "area": "Drama", "level": "Revision", "description": "A structured revision module for Drama, focused on important authors."}, {"title": "Drama: Major Works", "area": "Drama", "level": "Revision", "description": "A structured revision module for Drama, focused on major works."}, {"title": "Drama: Critical Approaches", "area": "Drama", "level": "Revision", "description": "A structured revision module for Drama, focused on critical approaches."}, {"title": "Drama: Frequently Confused Facts", "area": "Drama", "level": "Revision", "description": "A structured revision module for Drama, focused on frequently confused facts."}, {"title": "Drama: Exam Revision Checklist", "area": "Drama", "level": "Revision", "description": "A structured revision module for Drama, focused on exam revision checklist."}, {"title": "Poetry: Chronology", "area": "Poetry", "level": "Revision", "description": "A structured revision module for Poetry, focused on chronology."}, {"title": "Poetry: Major Movements", "area": "Poetry", "level": "Revision", "description": "A structured revision module for Poetry, focused on major movements."}, {"title": "Poetry: Key Terminology", "area": "Poetry", "level": "Revision", "description": "A structured revision module for Poetry, focused on key terminology."}, {"title": "Poetry: Important Authors", "area": "Poetry", "level": "Revision", "description": "A structured revision module for Poetry, focused on important authors."}, {"title": "Poetry: Major Works", "area": "Poetry", "level": "Revision", "description": "A structured revision module for Poetry, focused on major works."}, {"title": "Poetry: Critical Approaches", "area": "Poetry", "level": "Revision", "description": "A structured revision module for Poetry, focused on critical approaches."}, {"title": "Poetry: Frequently Confused Facts", "area": "Poetry", "level": "Revision", "description": "A structured revision module for Poetry, focused on frequently confused facts."}, {"title": "Poetry: Exam Revision Checklist", "area": "Poetry", "level": "Revision", "description": "A structured revision module for Poetry, focused on exam revision checklist."}, {"title": "Fiction: Chronology", "area": "Fiction", "level": "Revision", "description": "A structured revision module for Fiction, focused on chronology."}, {"title": "Fiction: Major Movements", "area": "Fiction", "level": "Revision", "description": "A structured revision module for Fiction, focused on major movements."}, {"title": "Fiction: Key Terminology", "area": "Fiction", "level": "Revision", "description": "A structured revision module for Fiction, focused on key terminology."}, {"title": "Fiction: Important Authors", "area": "Fiction", "level": "Revision", "description": "A structured revision module for Fiction, focused on important authors."}, {"title": "Fiction: Major Works", "area": "Fiction", "level": "Revision", "description": "A structured revision module for Fiction, focused on major works."}, {"title": "Fiction: Critical Approaches", "area": "Fiction", "level": "Revision", "description": "A structured revision module for Fiction, focused on critical approaches."}, {"title": "Fiction: Frequently Confused Facts", "area": "Fiction", "level": "Revision", "description": "A structured revision module for Fiction, focused on frequently confused facts."}, {"title": "Fiction: Exam Revision Checklist", "area": "Fiction", "level": "Revision", "description": "A structured revision module for Fiction, focused on exam revision checklist."}, {"title": "Research & Teaching: Chronology", "area": "Research & Teaching", "level": "Revision", "description": "A structured revision module for Research & Teaching, focused on chronology."}, {"title": "Research & Teaching: Major Movements", "area": "Research & Teaching", "level": "Revision", "description": "A structured revision module for Research & Teaching, focused on major movements."}, {"title": "Research & Teaching: Key Terminology", "area": "Research & Teaching", "level": "Revision", "description": "A structured revision module for Research & Teaching, focused on key terminology."}, {"title": "Research & Teaching: Important Authors", "area": "Research & Teaching", "level": "Revision", "description": "A structured revision module for Research & Teaching, focused on important authors."}, {"title": "Research & Teaching: Major Works", "area": "Research & Teaching", "level": "Revision", "description": "A structured revision module for Research & Teaching, focused on major works."}, {"title": "Research & Teaching: Critical Approaches", "area": "Research & Teaching", "level": "Revision", "description": "A structured revision module for Research & Teaching, focused on critical approaches."}, {"title": "Research & Teaching: Frequently Confused Facts", "area": "Research & Teaching", "level": "Revision", "description": "A structured revision module for Research & Teaching, focused on frequently confused facts."}, {"title": "Research & Teaching: Exam Revision Checklist", "area": "Research & Teaching", "level": "Revision", "description": "A structured revision module for Research & Teaching, focused on exam revision checklist."}];
+const TOPICS=[{"title": "Beowulf", "area": "Old English", "level": "Core", "description": "Exam-focused notes on Beowulf:<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Beowulf | Complete English Literature Study Notes</title>
+
+<style>
+
+:root {
+    --bg: #f5f7fb;
+    --card: #ffffff;
+    --text: #1d2433;
+    --muted: #687386;
+    --primary: #4f46e5;
+    --secondary: #7c3aed;
+    --border: #e3e7ef;
+    --accent: #eef2ff;
+}
+
+.dark {
+    --bg: #111827;
+    --card: #1f2937;
+    --text: #f3f4f6;
+    --muted: #b8c0cc;
+    --primary: #818cf8;
+    --secondary: #a78bfa;
+    --border: #374151;
+    --accent: #312e81;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+/* HEADER */
+
+header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 55px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    max-width: 850px;
+    margin: auto;
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
+
+/* NAVIGATION */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    background: var(--accent);
+    color: var(--primary);
+}
+
+/* MAIN */
+
+.container {
+    width: min(1200px, 92%);
+    margin: 35px auto;
+}
+
+/* SEARCH */
+
+.search-box {
+    margin-bottom: 30px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--card);
+    color: var(--text);
+    font-size: 16px;
+}
+
+/* SECTIONS */
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 18px;
+    color: var(--primary);
+}
+
+section h3 {
+    margin: 20px 0 10px;
+    color: var(--secondary);
+}
+
+/* CARDS */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 18px;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 22px;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.04);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+/* FACT BOX */
+
+.fact-box {
+    background: var(--accent);
+    border-left: 5px solid var(--primary);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* TABLE */
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card);
+}
+
+th,
+td {
+    padding: 13px;
+    border: 1px solid var(--border);
+    text-align: left;
+}
+
+th {
+    background: var(--accent);
+}
+
+/* TIMELINE */
+
+.timeline {
+    border-left: 4px solid var(--primary);
+    margin-left: 15px;
+    padding-left: 25px;
+}
+
+.timeline-item {
+    margin-bottom: 25px;
+}
+
+.timeline-item strong {
+    color: var(--primary);
+}
+
+/* MCQ */
+
+.question {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 20px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+}
+
+.option {
+    display: block;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.option:hover {
+    background: var(--accent);
+}
+
+button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--card);
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 30px;
+    color: var(--muted);
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
+    }
+
+    nav {
+        justify-content: flex-start;
+        overflow-x: auto;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Beowulf</h1>
+
+<p>
+Complete Study Guide to the Old English Epic
+</p>
+
+<p>
+History • Background • Characters • Plot • Themes • Literary Features •
+Anglo-Saxon Culture • Exam Facts • MCQs
+</p>
+
+</header>
+
+
+<nav>
+
+<a href="#overview">Overview</a>
+<a href="#history">History</a>
+<a href="#manuscript">Manuscript</a>
+<a href="#plot">Plot</a>
+<a href="#characters">Characters</a>
+<a href="#battles">Battles</a>
+<a href="#themes">Themes</a>
+<a href="#features">Literary Features</a>
+<a href="#culture">Culture</a>
+<a href="#exam">Exam Facts</a>
+<a href="#mcq">MCQs</a>
+
+</nav>
+
+
+<main class="container">
+
+
+<div class="search-box">
+
+<input
+type="text"
+id="search"
+placeholder="Search Beowulf notes..."
+onkeyup="searchNotes()">
+
+</div>
+
+
+<!-- OVERVIEW -->
+
+<section id="overview">
+
+<h2>1. Beowulf: Basic Overview</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Title</h3>
+<p><strong>Beowulf</strong></p>
+</div>
+
+<div class="card">
+<h3>Genre</h3>
+<p>Old English heroic epic / Germanic heroic poem</p>
+</div>
+
+<div class="card">
+<h3>Language</h3>
+<p>Old English</p>
+</div>
+
+<div class="card">
+<h3>Period</h3>
+<p>Old English / Anglo-Saxon Literature</p>
+</div>
+
+<div class="card">
+<h3>Author</h3>
+<p>Unknown / Anonymous</p>
+</div>
+
+<div class="card">
+<h3>Approximate Date</h3>
+<p>Composed sometime between the 8th and early 11th centuries; exact dating remains debated.</p>
+</div>
+
+<div class="card">
+<h3>Setting</h3>
+<p>Primarily Scandinavia: Denmark and Geatland.</p>
+</div>
+
+<div class="card">
+<h3>Structure</h3>
+<p>More than 3,000 lines of verse.</p>
+</div>
+
+</div>
+
+<div class="fact-box">
+
+<strong>Exam Point:</strong>
+
+Beowulf is generally regarded as the most important surviving
+Old English heroic poem and one of the foundational works of English literature.
+
+</div>
+
+</section>
+
+
+<!-- HISTORY -->
+
+<section id="history">
+
+<h2>2. Historical Background</h2>
+
+<p>
+Beowulf belongs to the literary world of Anglo-Saxon England, but its
+story is set mainly in Scandinavia. The poem reflects the heroic culture
+of Germanic warrior societies.
+</p>
+
+<h3>Anglo-Saxon England</h3>
+
+<p>
+The Anglo-Saxon period is broadly associated with the settlement and
+development of Germanic peoples in England after the withdrawal of Roman
+authority. Society was organized around kings, warriors, kinship,
+loyalty and gift-giving.
+</p>
+
+<h3>Important Historical Ideas</h3>
+
+<div class="grid">
+
+<div class="card">
+<h3>Warrior Culture</h3>
+<p>
+Military courage, loyalty and reputation were central values.
+</p>
+</div>
+
+<div class="card">
+<h3>Comitatus</h3>
+<p>
+A relationship of loyalty between a lord and his warriors.
+</p>
+</div>
+
+<div class="card">
+<h3>Mead Hall</h3>
+<p>
+A social and political center where warriors gathered.
+</p>
+</div>
+
+<div class="card">
+<h3>Gift-Giving</h3>
+<p>
+Kings rewarded loyal warriors with treasure, weapons and status.
+</p>
+</div>
+
+<div class="card">
+<h3>Wyrd</h3>
+<p>
+A concept associated with fate or destiny in Germanic heroic thought.
+</p>
+</div>
+
+<div class="card">
+<h3>Reputation</h3>
+<p>
+A hero's fame could survive after his death.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MANUSCRIPT -->
+
+<section id="manuscript">
+
+<h2>3. Beowulf Manuscript</h2>
+
+<p>
+Beowulf survives in a single medieval manuscript commonly known as the
+<strong>Nowell Codex</strong>, preserved today in the British Library.
+</p>
+
+<div class="fact-box">
+
+<strong>Important:</strong>
+
+The poem was transmitted through manuscript culture, and the surviving
+manuscript is considerably later than the period in which the story is set.
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Manuscript</h3>
+<p>Nowell Codex</p>
+</div>
+
+<div class="card">
+<h3>Language</h3>
+<p>Old English</p>
+</div>
+
+<div class="card">
+<h3>Writing System</h3>
+<p>Written in the Latin alphabet.</p>
+</div>
+
+<div class="card">
+<h3>Preservation</h3>
+<p>Survives in one principal manuscript witness.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- AUTHORSHIP -->
+
+<section>
+
+<h2>4. Authorship and Date</h2>
+
+<h3>Who wrote Beowulf?</h3>
+
+<p>
+The author of Beowulf is unknown. The poem is therefore described as
+<strong>anonymous</strong>.
+</p>
+
+<h3>When was it written?</h3>
+
+<p>
+The exact date of composition is uncertain. Scholars have proposed
+different dates, ranging broadly from the early medieval period to
+later Anglo-Saxon England.
+</p>
+
+<div class="fact-box">
+
+<strong>NET Exam Fact:</strong>
+
+Never treat a precise composition date as completely settled. The poem's
+date remains a major scholarly question.
+
+</div>
+
+</section>
+
+
+<!-- PLOT -->
+
+<section id="plot">
+
+<h2>5. Complete Story / Plot</h2>
+
+<h3>Part I — Beowulf and Grendel</h3>
+
+<p>
+The Danish king Hrothgar has established a magnificent mead hall called
+Heorot. The hall becomes a center of celebration and fellowship.
+</p>
+
+<p>
+A monstrous creature named Grendel attacks Heorot and terrorizes
+Hrothgar's people for many years.
+</p>
+
+<p>
+Beowulf, a warrior of the Geats, hears about Hrothgar's suffering and
+travels to Denmark with his companions.
+</p>
+
+<p>
+Beowulf decides to fight Grendel without relying on weapons. During the
+night, he confronts the monster and defeats him.
+</p>
+
+
+<h3>Part II — Grendel's Mother</h3>
+
+<p>
+Grendel's mother seeks revenge for the death of her son. She attacks
+Heorot and carries away one of Hrothgar's important men.
+</p>
+
+<p>
+Beowulf follows her to her underwater dwelling. After a difficult
+struggle, he defeats her using a powerful ancient sword found in her
+dwelling.
+</p>
+
+
+<h3>Part III — Beowulf as King</h3>
+
+<p>
+Many years pass. Beowulf eventually becomes king of the Geats.
+</p>
+
+<p>
+In his old age, Beowulf faces a dragon after a treasure-hoard is
+disturbed.
+</p>
+
+<p>
+Beowulf fights the dragon. His young warrior Wiglaf remains loyal when
+many of the other warriors retreat.
+</p>
+
+<p>
+Beowulf defeats the dragon but receives a mortal wound.
+</p>
+
+
+<h3>Ending</h3>
+
+<p>
+Beowulf dies after securing victory. His people mourn him and remember
+his achievements.
+</p>
+
+<div class="fact-box">
+
+<strong>Basic Structure:</strong>
+
+Youthful Beowulf → heroic victories → kingship → old age →
+dragon battle → death → remembrance.
+
+</div>
+
+</section>
+
+
+<!-- CHARACTERS -->
+
+<section id="characters">
+
+<h2>6. Major Characters</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Beowulf</h3>
+
+<p>
+The central hero of the poem. He is a Geatish warrior who becomes king.
+He represents courage, strength, loyalty, leadership and heroic fame.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Hrothgar</h3>
+
+<p>
+King of the Danes and builder of Heorot. He represents wise kingship
+but also the vulnerability that comes with age.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Grendel</h3>
+
+<p>
+A monstrous enemy who attacks Heorot. He represents disorder,
+violence and exclusion from the human community.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Grendel's Mother</h3>
+
+<p>
+She seeks revenge for her son's death and becomes Beowulf's second
+major supernatural opponent.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Wiglaf</h3>
+
+<p>
+A young warrior who remains loyal to Beowulf during the dragon fight.
+He represents the heroic ideal of loyalty.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Unferth</h3>
+
+<p>
+A warrior at Hrothgar's court who initially challenges Beowulf's
+reputation but later provides him with a weapon.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Weland</h3>
+
+<p>
+A legendary smith referenced in the poem, associated with the Germanic
+tradition of magical or extraordinary craftsmanship.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>The Dragon</h3>
+
+<p>
+The final supernatural opponent. It is associated with treasure,
+destruction, mortality and the unavoidable end of the hero.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BATTLES -->
+
+<section id="battles">
+
+<h2>7. The Three Major Battles</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<strong>Battle 1: Beowulf vs Grendel</strong>
+
+<p>
+Location: Heorot.  
+Result: Beowulf defeats Grendel.
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<strong>Battle 2: Beowulf vs Grendel's Mother</strong>
+
+<p>
+Location: Her underwater dwelling.  
+Result: Beowulf defeats Grendel's mother.
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<strong>Battle 3: Beowulf vs Dragon</strong>
+
+<p>
+Location: Dragon's treasure hoard.  
+Result: Beowulf kills the dragon but dies from his wounds.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- THEMES -->
+
+<section id="themes">
+
+<h2>8. Major Themes</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Heroism</h3>
+<p>
+Beowulf's identity is defined by courage and his willingness to face
+danger for his people.
+</p>
+</div>
+
+<div class="card">
+<h3>Good vs Evil</h3>
+<p>
+The conflicts between Beowulf and supernatural enemies can be read as
+struggles between social order and destructive forces.
+</p>
+</div>
+
+<div class="card">
+<h3>Fate</h3>
+<p>
+The poem repeatedly explores human limitations and the power of destiny.
+</p>
+</div>
+
+<div class="card">
+<h3>Mortality</h3>
+<p>
+Even the strongest hero cannot escape death.
+</p>
+</div>
+
+<div class="card">
+<h3>Fame</h3>
+<p>
+Heroic reputation is presented as a way of achieving lasting remembrance.
+</p>
+</div>
+
+<div class="card">
+<h3>Loyalty</h3>
+<p>
+The relationship between lord and warrior is fundamental to the poem.
+</p>
+</div>
+
+<div class="card">
+<h3>Kingship</h3>
+<p>
+The poem explores the qualities required of a successful ruler.
+</p>
+</div>
+
+<div class="card">
+<h3>Treasure</h3>
+<p>
+Gold and treasure symbolize social status, generosity, power and the
+temporary nature of worldly possessions.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CULTURE -->
+
+<section id="culture">
+
+<h2>9. Anglo-Saxon Culture in Beowulf</h2>
+
+<div class="table-wrapper">
+
+<table>
+
+<tr>
+<th>Concept</th>
+<th>Meaning</th>
+<th>Importance</th>
+</tr>
+
+<tr>
+<td>Comitatus</td>
+<td>Lord-warrior loyalty</td>
+<td>Central to heroic society</td>
+</tr>
+
+<tr>
+<td>Wyrd</td>
+<td>Fate / destiny</td>
+<td>Represents limits on human control</td>
+</tr>
+
+<tr>
+<td>Mead Hall</td>
+<td>Warrior gathering place</td>
+<td>Symbol of community</td>
+</tr>
+
+<tr>
+<td>Scop</td>
+<td>Poet or singer</td>
+<td>Preserved heroic memory through oral performance</td>
+</tr>
+
+<tr>
+<td>Gift-Giving</td>
+<td>Distribution of treasure</td>
+<td>Strengthened loyalty between king and warriors</td>
+</tr>
+
+<tr>
+<td>Heroic Fame</td>
+<td>Reputation after death</td>
+<td>Major motivation for heroic action</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- LITERARY FEATURES -->
+
+<section id="features">
+
+<h2>10. Literary Features of Beowulf</h2>
+
+<h3>Alliteration</h3>
+
+<p>
+Old English poetry relies heavily on alliteration. Repeated initial
+sounds create rhythm and help organize the poetic line.
+</p>
+
+
+<h3>Caesura</h3>
+
+<p>
+A strong pause generally divides the Old English poetic line into
+two half-lines.
+</p>
+
+
+<h3>Kenning</h3>
+
+<p>
+A kenning is a compact metaphorical expression commonly associated with
+Old English and Old Norse poetry.
+</p>
+
+<p>
+Examples of the type include expressions such as "whale-road" for sea.
+</p>
+
+
+<h3>Oral-Formulaic Style</h3>
+
+<p>
+Repeated formulas and traditional expressions reflect the poem's
+connection with oral storytelling and performance traditions.
+</p>
+
+
+<h3>Epic Style</h3>
+
+<p>
+The poem contains heroic battles, supernatural enemies, kings,
+warriors, treasure, journeys and the struggle between human beings and
+forces beyond ordinary human power.
+</p>
+
+</section>
+
+
+<!-- CHRISTIANITY -->
+
+<section>
+
+<h2>11. Christianity and Paganism</h2>
+
+<p>
+One of the most important scholarly features of Beowulf is the mixture
+of Germanic heroic traditions with Christian perspectives.
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Germanic / Pagan Elements</h3>
+
+<ul>
+<li>Warrior culture</li>
+<li>Blood-feud traditions</li>
+<li>Heroic reputation</li>
+<li>Treasure-giving</li>
+<li>Fate</li>
+<li>Comitatus</li>
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h3>Christian Elements</h3>
+
+<ul>
+<li>References to biblical traditions</li>
+<li>Moral interpretation of evil</li>
+<li>References associated with Cain</li>
+<li>Providence</li>
+<li>Human mortality</li>
+</ul>
+
+</div>
+
+</div>
+
+<div class="fact-box">
+
+<strong>Critical Issue:</strong>
+
+Beowulf should not simply be classified as either completely pagan or
+completely Christian. The poem contains a complex interaction between
+older Germanic heroic traditions and Christian literary perspectives.
+
+</div>
+
+</section>
+
+
+<!-- SYMBOLS -->
+
+<section>
+
+<h2>12. Important Symbols and Motifs</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Heorot</h3>
+<p>
+Represents civilization, community, fellowship and royal power.
+</p>
+</div>
+
+<div class="card">
+<h3>The Mere</h3>
+<p>
+Represents the dangerous world outside human civilization.
+</p>
+</div>
+
+<div class="card">
+<h3>Treasure</h3>
+<p>
+Represents wealth, social power and the temporary nature of worldly
+possessions.
+</p>
+</div>
+
+<div class="card">
+<h3>Dragon</h3>
+<p>
+Represents destruction, mortality and the dangers surrounding wealth.
+</p>
+</div>
+
+<div class="card">
+<h3>Weapons</h3>
+<p>
+Weapons often carry historical and social significance within the
+warrior culture.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- HEROIC CODE -->
+
+<section>
+
+<h2>13. The Heroic Code</h2>
+
+<p>
+The heroic code is one of the central ideas needed to understand
+Beowulf.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>Courage</h3>
+<p>Face danger without surrender.</p>
+</div>
+
+<div class="card">
+<h3>Loyalty</h3>
+<p>Remain faithful to one's lord and companions.</p>
+</div>
+
+<div class="card">
+<h3>Generosity</h3>
+<p>A good king rewards loyal warriors.</p>
+</div>
+
+<div class="card">
+<h3>Reputation</h3>
+<p>Heroic fame gives meaning to one's life.</p>
+</div>
+
+<div class="card">
+<h3>Vengeance</h3>
+<p>Blood-feud and revenge are important aspects of Germanic heroic society.</p>
+</div>
+
+<div class="card">
+<h3>Leadership</h3>
+<p>A successful ruler protects and rewards his people.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STRUCTURE -->
+
+<section>
+
+<h2>14. Beowulf as an Epic</h2>
+
+<p>
+Beowulf possesses many characteristics associated with epic literature.
+</p>
+
+<div class="table-wrapper">
+
+<table>
+
+<tr>
+<th>Epic Feature</th>
+<th>Beowulf</th>
+</tr>
+
+<tr>
+<td>Heroic protagonist</td>
+<td>Beowulf</td>
+</tr>
+
+<tr>
+<td>Supernatural enemies</td>
+<td>Grendel, Grendel's mother and the dragon</td>
+</tr>
+
+<tr>
+<td>Extraordinary deeds</td>
+<td>Beowulf's victories in combat</td>
+</tr>
+
+<tr>
+<td>Warrior society</td>
+<td>Geats and Danes</td>
+</tr>
+
+<tr>
+<td>Journey</td>
+<td>Beowulf travels from Geatland to Denmark</td>
+</tr>
+
+<tr>
+<td>Fame</td>
+<td>Heroic reputation is central</td>
+</tr>
+
+<tr>
+<td>Death</td>
+<td>The hero ultimately dies after fighting the dragon</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- IMPORTANT FACTS -->
+
+<section id="exam">
+
+<h2>15. High-Yield Exam Facts</h2>
+
+<div class="card">
+
+<ul>
+
+<li>Beowulf is an Old English heroic poem.</li>
+
+<li>The author is anonymous.</li>
+
+<li>The poem survives in the Nowell Codex.</li>
+
+<li>The story is primarily set in Scandinavia.</li>
+
+<li>Beowulf is a Geat.</li>
+
+<li>Hrothgar is the Danish king.</li>
+
+<li>Heorot is Hrothgar's famous mead hall.</li>
+
+<li>Grendel attacks Heorot.</li>
+
+<li>Beowulf fights Grendel.</li>
+
+<li>Beowulf later fights Grendel's mother.</li>
+
+<li>In old age, Beowulf fights a dragon.</li>
+
+<li>Wiglaf remains loyal during the dragon battle.</li>
+
+<li>Beowulf becomes king of the Geats.</li>
+
+<li>The poem contains strong elements of the heroic code.</li>
+
+<li>Alliteration is a major feature of Old English verse.</li>
+
+<li>Caesura is important to the structure of the Old English poetic line.</li>
+
+<li>Kenning is a major stylistic device associated with Old English poetry.</li>
+
+<li>Wyrd represents fate or destiny.</li>
+
+<li>Comitatus describes the bond between a lord and his warriors.</li>
+
+<li>The poem combines Germanic heroic traditions with Christian elements.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+<!-- MCQ -->
+
+<section id="mcq">
+
+<h2>16. Beowulf MCQ Practice</h2>
+
+<div id="quiz"></div>
+
+<button onclick="submitQuiz()">Submit Test</button>
+
+<div id="result" class="result"></div>
+
+</section>
+
+
+<!-- QUICK REVISION -->
+
+<section>
+
+<h2>17. One-Minute Revision</h2>
+
+<div class="fact-box">
+
+<p>
+<strong>Beowulf = Old English + Anonymous + Heroic Epic + Scandinavia +
+Geatish Hero + Hrothgar + Heorot + Grendel + Grendel's Mother +
+Dragon + Wiglaf + Heroic Code + Wyrd + Comitatus + Alliteration +
+Kenning + Christian/Germanic Elements.</strong>
+</p>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+<p>
+© 2026 English Literature Study Hub
+</p>
+
+<p>
+Beowulf Study Resource | UGC NET | JRF | GATE | TGT | PGT | LT Grade | CUET PG
+</p>
+
+</footer>
+
+
+<script>
+
+/* =========================
+   SEARCH FUNCTION
+========================= */
+
+function searchNotes() {
+
+    let input =
+        document.getElementById("search").value.toLowerCase();
+
+    let sections =
+        document.querySelectorAll("section");
+
+    sections.forEach(section => {
+
+        let text =
+            section.innerText.toLowerCase();
+
+        if (text.includes(input)) {
+            section.style.display = "";
+        } else {
+            section.style.display = "none";
+        }
+
+    });
+
+}
+
+
+/* =========================
+   MCQ DATA
+========================= */
+
+const questions = [
+
+{
+question: "Beowulf is written in which language?",
+options: [
+"Middle English",
+"Old English",
+"Modern English",
+"Latin"
+],
+answer: 1
+},
+
+{
+question: "Who is the author of Beowulf?",
+options: [
+"Geoffrey Chaucer",
+"Caedmon",
+"Unknown",
+"King Alfred"
+],
+answer: 2
+},
+
+{
+question: "What is Heorot?",
+options: [
+"A sword",
+"A dragon",
+"A mead hall",
+"A kingdom"
+],
+answer: 2
+},
+
+{
+question: "Who is Hrothgar?",
+options: [
+"A Geatish warrior",
+"A Danish king",
+"A monster",
+"A poet"
+],
+answer: 1
+},
+
+{
+question: "Who attacks Heorot?",
+options: [
+"The Dragon",
+"Unferth",
+"Grendel",
+"Wiglaf"
+],
+answer: 2
+},
+
+{
+question: "Who is Beowulf?",
+options: [
+"A Geatish hero",
+"A Danish monster",
+"A Roman soldier",
+"A monk"
+],
+answer: 0
+},
+
+{
+question: "Who remains loyal to Beowulf during the dragon fight?",
+options: [
+"Unferth",
+"Wiglaf",
+"Hrothgar",
+"Grendel"
+],
+answer: 1
+},
+
+{
+question: "What is a kenning?",
+options: [
+"A type of manuscript",
+"A metaphorical compound expression",
+"A type of king",
+"A battle"
+],
+answer: 1
+},
+
+{
+question: "What is wyrd generally associated with?",
+options: [
+"Fate",
+"Treasure",
+"Music",
+"Law"
+],
+answer: 0
+},
+
+{
+question: "What is comitatus?",
+options: [
+"A poetic meter",
+"A lord-warrior loyalty relationship",
+"A monster",
+"A manuscript"
+],
+answer: 1
+},
+
+{
+question: "How many major supernatural opponents does Beowulf face?",
+options: [
+"One",
+"Two",
+"Three",
+"Four"
+],
+answer: 2
+},
+
+{
+question: "Who is Beowulf's final major opponent?",
+options: [
+"Grendel",
+"Hrothgar",
+"The Dragon",
+"Unferth"
+],
+answer: 2
+}
+
+];
+
+
+/* =========================
+   BUILD QUIZ
+========================= */
+
+const quiz =
+document.getElementById("quiz");
+
+questions.forEach((q, index) => {
+
+    let div =
+        document.createElement("div");
+
+    div.className = "question";
+
+    let html =
+        `<h3>${index + 1}. ${q.question}</h3>`;
+
+    q.options.forEach((option, optionIndex) => {
+
+        html += `
+        <label class="option">
+        <input
+        type="radio"
+        name="q${index}"
+        value="${optionIndex}">
+        ${option}
+        </label>
+        `;
+
+    });
+
+    div.innerHTML = html;
+
+    quiz.appendChild(div);
+
+});
+
+
+/* =========================
+   SUBMIT QUIZ
+========================= */
+
+function submitQuiz() {
+
+    let score = 0;
+
+    questions.forEach((q, index) => {
+
+        let selected =
+            document.querySelector(
+                `input[name="q${index}"]:checked`
+            );
+
+        if (selected &&
+            parseInt(selected.value) === q.answer) {
+
+            score++;
+
+        }
+
+    });
+
+    let percentage =
+        Math.round((score / questions.length) * 100);
+
+    document.getElementById("result").innerHTML =
+        `Your Score: ${score}/${questions.length}
+        (${percentage}%)`;
+
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+const darkButton =
+document.createElement("button");
+
+darkButton.innerText =
+"🌙 Dark Mode";
+
+darkButton.style.position =
+"fixed";
+
+darkButton.style.bottom =
+"20px";
+
+darkButton.style.right =
+"20px";
+
+darkButton.style.zIndex =
+"2000";
+
+darkButton.onclick = function() {
+
+    document.body.classList.toggle("dark");
+
+};
+
+document.body.appendChild(darkButton);
+
+</script>
+
+
+</body>
+</html>"}, {"title": "Caedmon's Hymn", "area": "Old English", "level": "Core", "description": "Exam-focused notes on Caedmon's Hymn: context, key concepts, major facts, works and likely question angles."}, {"title": "The Dream of the Rood", "area": "Old English", "level": "Core", "description": "Exam-focused notes on The Dream of the Rood: context, key concepts, major facts, works and likely question angles."}, {"title": "Old English heroic poetry", "area": "Old English", "level": "Core", "description": "Exam-focused notes on Old English heroic poetry: context, key concepts, major facts, works and likely question angles."}, {"title": "Old English elegy", "area": "Old English", "level": "Core", "description": "Exam-focused notes on Old English elegy: context, key concepts, major facts, works and likely question angles."}, {"title": "Anglo-Saxon Chronicle", "area": "Old English", "level": "Core", "description": "Exam-focused notes on Anglo-Saxon Chronicle: context, key concepts, major facts, works and likely question angles."}, {"title": "Old English riddles", "area": "Old English", "level": "Core", "description": "Exam-focused notes on Old English riddles: context, key concepts, major facts, works and likely question angles."}, {"title": "Christianity in Old English literature", "area": "Old English", "level": "Core", "description": "Exam-focused notes on Christianity in Old English literature: context, key concepts, major facts, works and likely question angles."}, {"title": "Norman Conquest and literature", "area": "Middle English", "level": "Core", "description": "Exam-focused notes on Norman Conquest and literature: context, key concepts, major facts, works and likely question angles."}, {"title": "Chaucer's life and works", "area": "Middle English", "level": "Core", "description": "Exam-focused notes on Chaucer's life and works: context, key concepts, major facts, works and likely question angles."}, {"title": "General Prologue", "area": "Middle English", "level": "Core", "description": "Exam-focused notes on General Prologue: context, key concepts, major facts, works and likely question angles."}, {"title": "The Knight's Tale", "area": "Middle English", "level": "Core", "description": "Exam-focused notes on The Knight's Tale: context, key concepts, major facts, works and likely question angles."}, {"title": "The Miller's Tale", "area": "Middle English", "level": "Core", "description": "Exam-focused notes on The Miller's Tale: context, key concepts, major facts, works and likely question angles."}, {"title": "The Wife of Bath", "area": "Middle English", "level": "Core", "description": "Exam-focused notes on The Wife of Bath: context, key concepts, major facts, works and likely question angles."}, {"title": "Troilus and Criseyde", "area": "Middle English", "level": "Core", "description": "Exam-focused notes on Troilus and Criseyde: context, key concepts, major facts, works and likely question angles."}, {"title": "Everyman", "area": "Middle English", "level": "Core", "description": "Exam-focused notes on Everyman: context, key concepts, major facts, works and likely question angles."}, {"title": "Pearl", "area": "Middle English", "level": "Core", "description": "Exam-focused notes on Pearl: context, key concepts, major facts, works and likely question angles."}, {"title": "Sir Gawain and the Green Knight", "area": "Middle English", "level": "Core", "description": "Exam-focused notes on Sir Gawain and the Green Knight: context, key concepts, major facts, works and likely question angles."}, {"title": "Piers Plowman", "area": "Middle English", "level": "Core", "description": "Exam-focused notes on Piers Plowman: context, key concepts, major facts, works and likely question angles."}, {"title": "Middle English romance", "area": "Middle English", "level": "Core", "description": "Exam-focused notes on Middle English romance: context, key concepts, major facts, works and likely question angles."}, {"title": "English Renaissance", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on English Renaissance: context, key concepts, major facts, works and likely question angles."}, {"title": "Humanism", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on Humanism: context, key concepts, major facts, works and likely question angles."}, {"title": "Reformation and literature", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on Reformation and literature: context, key concepts, major facts, works and likely question angles."}, {"title": "Elizabethan literature", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on Elizabethan literature: context, key concepts, major facts, works and likely question angles."}, {"title": "Jacobean literature", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on Jacobean literature: context, key concepts, major facts, works and likely question angles."}, {"title": "University Wits", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on University Wits: context, key concepts, major facts, works and likely question angles."}, {"title": "Spenserian stanza", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on Spenserian stanza: context, key concepts, major facts, works and likely question angles."}, {"title": "Edmund Spenser", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on Edmund Spenser: context, key concepts, major facts, works and likely question angles."}, {"title": "The Faerie Queene", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on The Faerie Queene: context, key concepts, major facts, works and likely question angles."}, {"title": "Philip Sidney", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on Philip Sidney: context, key concepts, major facts, works and likely question angles."}, {"title": "Astrophil and Stella", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on Astrophil and Stella: context, key concepts, major facts, works and likely question angles."}, {"title": "Christopher Marlowe", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on Christopher Marlowe: context, key concepts, major facts, works and likely question angles."}, {"title": "Doctor Faustus", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on Doctor Faustus: context, key concepts, major facts, works and likely question angles."}, {"title": "Ben Jonson", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on Ben Jonson: context, key concepts, major facts, works and likely question angles."}, {"title": "Volpone", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on Volpone: context, key concepts, major facts, works and likely question angles."}, {"title": "Francis Bacon's essays", "area": "Renaissance", "level": "Core", "description": "Exam-focused notes on Francis Bacon's essays: context, key concepts, major facts, works and likely question angles."}, {"title": "Shakespeare chronology", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on Shakespeare chronology: context, key concepts, major facts, works and likely question angles."}, {"title": "Shakespearean comedy", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on Shakespearean comedy: context, key concepts, major facts, works and likely question angles."}, {"title": "Shakespearean tragedy", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on Shakespearean tragedy: context, key concepts, major facts, works and likely question angles."}, {"title": "Shakespearean history plays", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on Shakespearean history plays: context, key concepts, major facts, works and likely question angles."}, {"title": "Hamlet", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on Hamlet: context, key concepts, major facts, works and likely question angles."}, {"title": "Macbeth", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on Macbeth: context, key concepts, major facts, works and likely question angles."}, {"title": "Othello", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on Othello: context, key concepts, major facts, works and likely question angles."}, {"title": "King Lear", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on King Lear: context, key concepts, major facts, works and likely question angles."}, {"title": "Romeo and Juliet", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on Romeo and Juliet: context, key concepts, major facts, works and likely question angles."}, {"title": "The Tempest", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on The Tempest: context, key concepts, major facts, works and likely question angles."}, {"title": "Twelfth Night", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on Twelfth Night: context, key concepts, major facts, works and likely question angles."}, {"title": "As You Like It", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on As You Like It: context, key concepts, major facts, works and likely question angles."}, {"title": "A Midsummer Night's Dream", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on A Midsummer Night's Dream: context, key concepts, major facts, works and likely question angles."}, {"title": "The Merchant of Venice", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on The Merchant of Venice: context, key concepts, major facts, works and likely question angles."}, {"title": "Julius Caesar", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on Julius Caesar: context, key concepts, major facts, works and likely question angles."}, {"title": "Richard III", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on Richard III: context, key concepts, major facts, works and likely question angles."}, {"title": "Sonnets", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on Sonnets: context, key concepts, major facts, works and likely question angles."}, {"title": "Shakespeare's blank verse", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on Shakespeare's blank verse: context, key concepts, major facts, works and likely question angles."}, {"title": "Shakespearean dramatic technique", "area": "Shakespeare", "level": "Core", "description": "Exam-focused notes on Shakespearean dramatic technique: context, key concepts, major facts, works and likely question angles."}, {"title": "Restoration drama", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Restoration drama: context, key concepts, major facts, works and likely question angles."}, {"title": "Comedy of manners", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Comedy of manners: context, key concepts, major facts, works and likely question angles."}, {"title": "John Dryden", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on John Dryden: context, key concepts, major facts, works and likely question angles."}, {"title": "Absalom and Achitophel", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Absalom and Achitophel: context, key concepts, major facts, works and likely question angles."}, {"title": "Aphra Behn", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Aphra Behn: context, key concepts, major facts, works and likely question angles."}, {"title": "The Rover", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on The Rover: context, key concepts, major facts, works and likely question angles."}, {"title": "Alexander Pope", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Alexander Pope: context, key concepts, major facts, works and likely question angles."}, {"title": "The Rape of the Lock", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on The Rape of the Lock: context, key concepts, major facts, works and likely question angles."}, {"title": "Jonathan Swift", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Jonathan Swift: context, key concepts, major facts, works and likely question angles."}, {"title": "Gulliver's Travels", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Gulliver's Travels: context, key concepts, major facts, works and likely question angles."}, {"title": "Samuel Johnson", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Samuel Johnson: context, key concepts, major facts, works and likely question angles."}, {"title": "Preface to Shakespeare", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Preface to Shakespeare: context, key concepts, major facts, works and likely question angles."}, {"title": "The Rambler", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on The Rambler: context, key concepts, major facts, works and likely question angles."}, {"title": "Daniel Defoe", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Daniel Defoe: context, key concepts, major facts, works and likely question angles."}, {"title": "Robinson Crusoe", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Robinson Crusoe: context, key concepts, major facts, works and likely question angles."}, {"title": "Henry Fielding", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Henry Fielding: context, key concepts, major facts, works and likely question angles."}, {"title": "Tom Jones", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Tom Jones: context, key concepts, major facts, works and likely question angles."}, {"title": "Laurence Sterne", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Laurence Sterne: context, key concepts, major facts, works and likely question angles."}, {"title": "Tristram Shandy", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Tristram Shandy: context, key concepts, major facts, works and likely question angles."}, {"title": "Richard Sheridan", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on Richard Sheridan: context, key concepts, major facts, works and likely question angles."}, {"title": "The School for Scandal", "area": "Restoration & 18th Century", "level": "Core", "description": "Exam-focused notes on The School for Scandal: context, key concepts, major facts, works and likely question angles."}, {"title": "Romanticism", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Romanticism: context, key concepts, major facts, works and likely question angles."}, {"title": "Lyrical Ballads", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Lyrical Ballads: context, key concepts, major facts, works and likely question angles."}, {"title": "Wordsworth's Preface", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Wordsworth's Preface: context, key concepts, major facts, works and likely question angles."}, {"title": "William Wordsworth", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on William Wordsworth: context, key concepts, major facts, works and likely question angles."}, {"title": "Tintern Abbey", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Tintern Abbey: context, key concepts, major facts, works and likely question angles."}, {"title": "Ode: Intimations of Immortality", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Ode: Intimations of Immortality: context, key concepts, major facts, works and likely question angles."}, {"title": "Samuel Taylor Coleridge", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Samuel Taylor Coleridge: context, key concepts, major facts, works and likely question angles."}, {"title": "The Rime of the Ancient Mariner", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on The Rime of the Ancient Mariner: context, key concepts, major facts, works and likely question angles."}, {"title": "Kubla Khan", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Kubla Khan: context, key concepts, major facts, works and likely question angles."}, {"title": "Biographia Literaria", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Biographia Literaria: context, key concepts, major facts, works and likely question angles."}, {"title": "Lord Byron", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Lord Byron: context, key concepts, major facts, works and likely question angles."}, {"title": "Childe Harold", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Childe Harold: context, key concepts, major facts, works and likely question angles."}, {"title": "Percy Bysshe Shelley", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Percy Bysshe Shelley: context, key concepts, major facts, works and likely question angles."}, {"title": "Ode to the West Wind", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Ode to the West Wind: context, key concepts, major facts, works and likely question angles."}, {"title": "To a Skylark", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on To a Skylark: context, key concepts, major facts, works and likely question angles."}, {"title": "John Keats", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on John Keats: context, key concepts, major facts, works and likely question angles."}, {"title": "Ode to a Nightingale", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Ode to a Nightingale: context, key concepts, major facts, works and likely question angles."}, {"title": "Ode on a Grecian Urn", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Ode on a Grecian Urn: context, key concepts, major facts, works and likely question angles."}, {"title": "Negative Capability", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Negative Capability: context, key concepts, major facts, works and likely question angles."}, {"title": "Mary Shelley", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Mary Shelley: context, key concepts, major facts, works and likely question angles."}, {"title": "Frankenstein", "area": "Romantic", "level": "Core", "description": "Exam-focused notes on Frankenstein: context, key concepts, major facts, works and likely question angles."}, {"title": "Victorian literature", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Victorian literature: context, key concepts, major facts, works and likely question angles."}, {"title": "Industrial Revolution and literature", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Industrial Revolution and literature: context, key concepts, major facts, works and likely question angles."}, {"title": "Alfred Tennyson", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Alfred Tennyson: context, key concepts, major facts, works and likely question angles."}, {"title": "In Memoriam", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on In Memoriam: context, key concepts, major facts, works and likely question angles."}, {"title": "Robert Browning", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Robert Browning: context, key concepts, major facts, works and likely question angles."}, {"title": "My Last Duchess", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on My Last Duchess: context, key concepts, major facts, works and likely question angles."}, {"title": "Dramatic monologue", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Dramatic monologue: context, key concepts, major facts, works and likely question angles."}, {"title": "Matthew Arnold", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Matthew Arnold: context, key concepts, major facts, works and likely question angles."}, {"title": "Dover Beach", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Dover Beach: context, key concepts, major facts, works and likely question angles."}, {"title": "Christina Rossetti", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Christina Rossetti: context, key concepts, major facts, works and likely question angles."}, {"title": "Goblin Market", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Goblin Market: context, key concepts, major facts, works and likely question angles."}, {"title": "Thomas Hardy", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Thomas Hardy: context, key concepts, major facts, works and likely question angles."}, {"title": "Tess of the d'Urbervilles", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Tess of the d'Urbervilles: context, key concepts, major facts, works and likely question angles."}, {"title": "George Eliot", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on George Eliot: context, key concepts, major facts, works and likely question angles."}, {"title": "Middlemarch", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Middlemarch: context, key concepts, major facts, works and likely question angles."}, {"title": "Charles Dickens", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Charles Dickens: context, key concepts, major facts, works and likely question angles."}, {"title": "Great Expectations", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Great Expectations: context, key concepts, major facts, works and likely question angles."}, {"title": "Charlotte Bronte", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Charlotte Bronte: context, key concepts, major facts, works and likely question angles."}, {"title": "Jane Eyre", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Jane Eyre: context, key concepts, major facts, works and likely question angles."}, {"title": "Emily Bronte", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Emily Bronte: context, key concepts, major facts, works and likely question angles."}, {"title": "Wuthering Heights", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Wuthering Heights: context, key concepts, major facts, works and likely question angles."}, {"title": "Oscar Wilde", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on Oscar Wilde: context, key concepts, major facts, works and likely question angles."}, {"title": "The Importance of Being Earnest", "area": "Victorian", "level": "Core", "description": "Exam-focused notes on The Importance of Being Earnest: context, key concepts, major facts, works and likely question angles."}, {"title": "Modernism", "area": "Modern", "level": "Core", "description": "Exam-focused notes on Modernism: context, key concepts, major facts, works and likely question angles."}, {"title": "Modernist poetry", "area": "Modern", "level": "Core", "description": "Exam-focused notes on Modernist poetry: context, key concepts, major facts, works and likely question angles."}, {"title": "T. S. Eliot", "area": "Modern", "level": "Core", "description": "Exam-focused notes on T. S. Eliot: context, key concepts, major facts, works and likely question angles."}, {"title": "The Waste Land", "area": "Modern", "level": "Core", "description": "Exam-focused notes on The Waste Land: context, key concepts, major facts, works and likely question angles."}, {"title": "Tradition and the Individual Talent", "area": "Modern", "level": "Core", "description": "Exam-focused notes on Tradition and the Individual Talent: context, key concepts, major facts, works and likely question angles."}, {"title": "The Love Song of J. Alfred Prufrock", "area": "Modern", "level": "Core", "description": "Exam-focused notes on The Love Song of J. Alfred Prufrock: context, key concepts, major facts, works and likely question angles."}, {"title": "W. B. Yeats", "area": "Modern", "level": "Core", "description": "Exam-focused notes on W. B. Yeats: context, key concepts, major facts, works and likely question angles."}, {"title": "The Second Coming", "area": "Modern", "level": "Core", "description": "Exam-focused notes on The Second Coming: context, key concepts, major facts, works and likely question angles."}, {"title": "Ezra Pound", "area": "Modern", "level": "Core", "description": "Exam-focused notes on Ezra Pound: context, key concepts, major facts, works and likely question angles."}, {"title": "Hugh Selwyn Mauberley", "area": "Modern", "level": "Core", "description": "Exam-focused notes on Hugh Selwyn Mauberley: context, key concepts, major facts, works and likely question angles."}, {"title": "James Joyce", "area": "Modern", "level": "Core", "description": "Exam-focused notes on James Joyce: context, key concepts, major facts, works and likely question angles."}, {"title": "Ulysses", "area": "Modern", "level": "Core", "description": "Exam-focused notes on Ulysses: context, key concepts, major facts, works and likely question angles."}, {"title": "Virginia Woolf", "area": "Modern", "level": "Core", "description": "Exam-focused notes on Virginia Woolf: context, key concepts, major facts, works and likely question angles."}, {"title": "Mrs Dalloway", "area": "Modern", "level": "Core", "description": "Exam-focused notes on Mrs Dalloway: context, key concepts, major facts, works and likely question angles."}, {"title": "To the Lighthouse", "area": "Modern", "level": "Core", "description": "Exam-focused notes on To the Lighthouse: context, key concepts, major facts, works and likely question angles."}, {"title": "D. H. Lawrence", "area": "Modern", "level": "Core", "description": "Exam-focused notes on D. H. Lawrence: context, key concepts, major facts, works and likely question angles."}, {"title": "Sons and Lovers", "area": "Modern", "level": "Core", "description": "Exam-focused notes on Sons and Lovers: context, key concepts, major facts, works and likely question angles."}, {"title": "E. M. Forster", "area": "Modern", "level": "Core", "description": "Exam-focused notes on E. M. Forster: context, key concepts, major facts, works and likely question angles."}, {"title": "A Passage to India", "area": "Modern", "level": "Core", "description": "Exam-focused notes on A Passage to India: context, key concepts, major facts, works and likely question angles."}, {"title": "George Bernard Shaw", "area": "Modern", "level": "Core", "description": "Exam-focused notes on George Bernard Shaw: context, key concepts, major facts, works and likely question angles."}, {"title": "Arms and the Man", "area": "Modern", "level": "Core", "description": "Exam-focused notes on Arms and the Man: context, key concepts, major facts, works and likely question angles."}, {"title": "Samuel Beckett", "area": "Modern", "level": "Core", "description": "Exam-focused notes on Samuel Beckett: context, key concepts, major facts, works and likely question angles."}, {"title": "Waiting for Godot", "area": "Modern", "level": "Core", "description": "Exam-focused notes on Waiting for Godot: context, key concepts, major facts, works and likely question angles."}, {"title": "Postcolonial literature", "area": "Postwar & Contemporary", "level": "Core", "description": "Exam-focused notes on Postcolonial literature: context, key concepts, major facts, works and likely question angles."}, {"title": "Philip Larkin", "area": "Postwar & Contemporary", "level": "Core", "description": "Exam-focused notes on Philip Larkin: context, key concepts, major facts, works and likely question angles."}, {"title": "Ted Hughes", "area": "Postwar & Contemporary", "level": "Core", "description": "Exam-focused notes on Ted Hughes: context, key concepts, major facts, works and likely question angles."}, {"title": "Seamus Heaney", "area": "Postwar & Contemporary", "level": "Core", "description": "Exam-focused notes on Seamus Heaney: context, key concepts, major facts, works and likely question angles."}, {"title": "Derek Walcott", "area": "Postwar & Contemporary", "level": "Core", "description": "Exam-focused notes on Derek Walcott: context, key concepts, major facts, works and likely question angles."}, {"title": "Salman Rushdie", "area": "Postwar & Contemporary", "level": "Core", "description": "Exam-focused notes on Salman Rushdie: context, key concepts, major facts, works and likely question angles."}, {"title": "Midnight's Children", "area": "Postwar & Contemporary", "level": "Core", "description": "Exam-focused notes on Midnight's Children: context, key concepts, major facts, works and likely question angles."}, {"title": "Kazuo Ishiguro", "area": "Postwar & Contemporary", "level": "Core", "description": "Exam-focused notes on Kazuo Ishiguro: context, key concepts, major facts, works and likely question angles."}, {"title": "Never Let Me Go", "area": "Postwar & Contemporary", "level": "Core", "description": "Exam-focused notes on Never Let Me Go: context, key concepts, major facts, works and likely question angles."}, {"title": "Ian McEwan", "area": "Postwar & Contemporary", "level": "Core", "description": "Exam-focused notes on Ian McEwan: context, key concepts, major facts, works and likely question angles."}, {"title": "Zadie Smith", "area": "Postwar & Contemporary", "level": "Core", "description": "Exam-focused notes on Zadie Smith: context, key concepts, major facts, works and likely question angles."}, {"title": "Jeanette Winterson", "area": "Postwar & Contemporary", "level": "Core", "description": "Exam-focused notes on Jeanette Winterson: context, key concepts, major facts, works and likely question angles."}, {"title": "Contemporary British poetry", "area": "Postwar & Contemporary", "level": "Core", "description": "Exam-focused notes on Contemporary British poetry: context, key concepts, major facts, works and likely question angles."}, {"title": "Multicultural literature", "area": "Postwar & Contemporary", "level": "Core", "description": "Exam-focused notes on Multicultural literature: context, key concepts, major facts, works and likely question angles."}, {"title": "Diaspora writing", "area": "Postwar & Contemporary", "level": "Core", "description": "Exam-focused notes on Diaspora writing: context, key concepts, major facts, works and likely question angles."}, {"title": "American Renaissance", "area": "American", "level": "Core", "description": "Exam-focused notes on American Renaissance: context, key concepts, major facts, works and likely question angles."}, {"title": "Ralph Waldo Emerson", "area": "American", "level": "Core", "description": "Exam-focused notes on Ralph Waldo Emerson: context, key concepts, major facts, works and likely question angles."}, {"title": "Self-Reliance", "area": "American", "level": "Core", "description": "Exam-focused notes on Self-Reliance: context, key concepts, major facts, works and likely question angles."}, {"title": "Henry David Thoreau", "area": "American", "level": "Core", "description": "Exam-focused notes on Henry David Thoreau: context, key concepts, major facts, works and likely question angles."}, {"title": "Walden", "area": "American", "level": "Core", "description": "Exam-focused notes on Walden: context, key concepts, major facts, works and likely question angles."}, {"title": "Edgar Allan Poe", "area": "American", "level": "Core", "description": "Exam-focused notes on Edgar Allan Poe: context, key concepts, major facts, works and likely question angles."}, {"title": "The Raven", "area": "American", "level": "Core", "description": "Exam-focused notes on The Raven: context, key concepts, major facts, works and likely question angles."}, {"title": "Nathaniel Hawthorne", "area": "American", "level": "Core", "description": "Exam-focused notes on Nathaniel Hawthorne: context, key concepts, major facts, works and likely question angles."}, {"title": "The Scarlet Letter", "area": "American", "level": "Core", "description": "Exam-focused notes on The Scarlet Letter: context, key concepts, major facts, works and likely question angles."}, {"title": "Herman Melville", "area": "American", "level": "Core", "description": "Exam-focused notes on Herman Melville: context, key concepts, major facts, works and likely question angles."}, {"title": "Moby-Dick", "area": "American", "level": "Core", "description": "Exam-focused notes on Moby-Dick: context, key concepts, major facts, works and likely question angles."}, {"title": "Walt Whitman", "area": "American", "level": "Core", "description": "Exam-focused notes on Walt Whitman: context, key concepts, major facts, works and likely question angles."}, {"title": "Leaves of Grass", "area": "American", "level": "Core", "description": "Exam-focused notes on Leaves of Grass: context, key concepts, major facts, works and likely question angles."}, {"title": "Emily Dickinson", "area": "American", "level": "Core", "description": "Exam-focused notes on Emily Dickinson: context, key concepts, major facts, works and likely question angles."}, {"title": "Robert Frost", "area": "American", "level": "Core", "description": "Exam-focused notes on Robert Frost: context, key concepts, major facts, works and likely question angles."}, {"title": "The Road Not Taken", "area": "American", "level": "Core", "description": "Exam-focused notes on The Road Not Taken: context, key concepts, major facts, works and likely question angles."}, {"title": "T. S. Eliot and American modernism", "area": "American", "level": "Core", "description": "Exam-focused notes on T. S. Eliot and American modernism: context, key concepts, major facts, works and likely question angles."}, {"title": "F. Scott Fitzgerald", "area": "American", "level": "Core", "description": "Exam-focused notes on F. Scott Fitzgerald: context, key concepts, major facts, works and likely question angles."}, {"title": "The Great Gatsby", "area": "American", "level": "Core", "description": "Exam-focused notes on The Great Gatsby: context, key concepts, major facts, works and likely question angles."}, {"title": "Ernest Hemingway", "area": "American", "level": "Core", "description": "Exam-focused notes on Ernest Hemingway: context, key concepts, major facts, works and likely question angles."}, {"title": "The Old Man and the Sea", "area": "American", "level": "Core", "description": "Exam-focused notes on The Old Man and the Sea: context, key concepts, major facts, works and likely question angles."}, {"title": "Toni Morrison", "area": "American", "level": "Core", "description": "Exam-focused notes on Toni Morrison: context, key concepts, major facts, works and likely question angles."}, {"title": "Beloved", "area": "American", "level": "Core", "description": "Exam-focused notes on Beloved: context, key concepts, major facts, works and likely question angles."}, {"title": "Arthur Miller", "area": "American", "level": "Core", "description": "Exam-focused notes on Arthur Miller: context, key concepts, major facts, works and likely question angles."}, {"title": "Death of a Salesman", "area": "American", "level": "Core", "description": "Exam-focused notes on Death of a Salesman: context, key concepts, major facts, works and likely question angles."}, {"title": "Tennessee Williams", "area": "American", "level": "Core", "description": "Exam-focused notes on Tennessee Williams: context, key concepts, major facts, works and likely question angles."}, {"title": "A Streetcar Named Desire", "area": "American", "level": "Core", "description": "Exam-focused notes on A Streetcar Named Desire: context, key concepts, major facts, works and likely question angles."}, {"title": "Indian English literature", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Indian English literature: context, key concepts, major facts, works and likely question angles."}, {"title": "Raja Rao", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Raja Rao: context, key concepts, major facts, works and likely question angles."}, {"title": "Kanthapura", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Kanthapura: context, key concepts, major facts, works and likely question angles."}, {"title": "R. K. Narayan", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on R. K. Narayan: context, key concepts, major facts, works and likely question angles."}, {"title": "The Guide", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on The Guide: context, key concepts, major facts, works and likely question angles."}, {"title": "Mulk Raj Anand", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Mulk Raj Anand: context, key concepts, major facts, works and likely question angles."}, {"title": "Untouchable", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Untouchable: context, key concepts, major facts, works and likely question angles."}, {"title": "Anita Desai", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Anita Desai: context, key concepts, major facts, works and likely question angles."}, {"title": "Clear Light of Day", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Clear Light of Day: context, key concepts, major facts, works and likely question angles."}, {"title": "Kamala Markandaya", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Kamala Markandaya: context, key concepts, major facts, works and likely question angles."}, {"title": "Nectar in a Sieve", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Nectar in a Sieve: context, key concepts, major facts, works and likely question angles."}, {"title": "Arundhati Roy", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Arundhati Roy: context, key concepts, major facts, works and likely question angles."}, {"title": "The God of Small Things", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on The God of Small Things: context, key concepts, major facts, works and likely question angles."}, {"title": "Amitav Ghosh", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Amitav Ghosh: context, key concepts, major facts, works and likely question angles."}, {"title": "The Shadow Lines", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on The Shadow Lines: context, key concepts, major facts, works and likely question angles."}, {"title": "Vikram Seth", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Vikram Seth: context, key concepts, major facts, works and likely question angles."}, {"title": "A Suitable Boy", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on A Suitable Boy: context, key concepts, major facts, works and likely question angles."}, {"title": "Salman Rushdie and India", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Salman Rushdie and India: context, key concepts, major facts, works and likely question angles."}, {"title": "Nissim Ezekiel", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Nissim Ezekiel: context, key concepts, major facts, works and likely question angles."}, {"title": "Night of the Scorpion", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Night of the Scorpion: context, key concepts, major facts, works and likely question angles."}, {"title": "A. K. Ramanujan", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on A. K. Ramanujan: context, key concepts, major facts, works and likely question angles."}, {"title": "Obituary", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Obituary: context, key concepts, major facts, works and likely question angles."}, {"title": "Kamala Das", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Kamala Das: context, key concepts, major facts, works and likely question angles."}, {"title": "An Introduction", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on An Introduction: context, key concepts, major facts, works and likely question angles."}, {"title": "Jayanta Mahapatra", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Jayanta Mahapatra: context, key concepts, major facts, works and likely question angles."}, {"title": "Toru Dutt", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Toru Dutt: context, key concepts, major facts, works and likely question angles."}, {"title": "Sarojini Naidu", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Sarojini Naidu: context, key concepts, major facts, works and likely question angles."}, {"title": "Mahesh Dattani", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Mahesh Dattani: context, key concepts, major facts, works and likely question angles."}, {"title": "Final Solutions", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Final Solutions: context, key concepts, major facts, works and likely question angles."}, {"title": "Girish Karnad", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Girish Karnad: context, key concepts, major facts, works and likely question angles."}, {"title": "Tughlaq", "area": "Indian Writing in English", "level": "Core", "description": "Exam-focused notes on Tughlaq: context, key concepts, major facts, works and likely question angles."}, {"title": "Plato", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Plato: context, key concepts, major facts, works and likely question angles."}, {"title": "Aristotle", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Aristotle: context, key concepts, major facts, works and likely question angles."}, {"title": "Poetics", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Poetics: context, key concepts, major facts, works and likely question angles."}, {"title": "Catharsis", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Catharsis: context, key concepts, major facts, works and likely question angles."}, {"title": "Hamartia", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Hamartia: context, key concepts, major facts, works and likely question angles."}, {"title": "Longinus", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Longinus: context, key concepts, major facts, works and likely question angles."}, {"title": "On the Sublime", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on On the Sublime: context, key concepts, major facts, works and likely question angles."}, {"title": "Horace", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Horace: context, key concepts, major facts, works and likely question angles."}, {"title": "Sidney's Defence of Poesy", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Sidney's Defence of Poesy: context, key concepts, major facts, works and likely question angles."}, {"title": "Dryden's criticism", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Dryden's criticism: context, key concepts, major facts, works and likely question angles."}, {"title": "Samuel Johnson's criticism", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Samuel Johnson's criticism: context, key concepts, major facts, works and likely question angles."}, {"title": "Wordsworth's poetic theory", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Wordsworth's poetic theory: context, key concepts, major facts, works and likely question angles."}, {"title": "Coleridge's imagination", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Coleridge's imagination: context, key concepts, major facts, works and likely question angles."}, {"title": "Matthew Arnold", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Matthew Arnold: context, key concepts, major facts, works and likely question angles."}, {"title": "Touchstone method", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Touchstone method: context, key concepts, major facts, works and likely question angles."}, {"title": "T. S. Eliot's criticism", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on T. S. Eliot's criticism: context, key concepts, major facts, works and likely question angles."}, {"title": "I. A. Richards", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on I. A. Richards: context, key concepts, major facts, works and likely question angles."}, {"title": "Practical Criticism", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Practical Criticism: context, key concepts, major facts, works and likely question angles."}, {"title": "New Criticism", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on New Criticism: context, key concepts, major facts, works and likely question angles."}, {"title": "Cleanth Brooks", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Cleanth Brooks: context, key concepts, major facts, works and likely question angles."}, {"title": "W. K. Wimsatt", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on W. K. Wimsatt: context, key concepts, major facts, works and likely question angles."}, {"title": "Intentional Fallacy", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Intentional Fallacy: context, key concepts, major facts, works and likely question angles."}, {"title": "Structuralism", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Structuralism: context, key concepts, major facts, works and likely question angles."}, {"title": "Ferdinand de Saussure", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Ferdinand de Saussure: context, key concepts, major facts, works and likely question angles."}, {"title": "Russian Formalism", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Russian Formalism: context, key concepts, major facts, works and likely question angles."}, {"title": "Viktor Shklovsky", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Viktor Shklovsky: context, key concepts, major facts, works and likely question angles."}, {"title": "Roland Barthes", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Roland Barthes: context, key concepts, major facts, works and likely question angles."}, {"title": "Post-structuralism", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Post-structuralism: context, key concepts, major facts, works and likely question angles."}, {"title": "Jacques Derrida", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Jacques Derrida: context, key concepts, major facts, works and likely question angles."}, {"title": "Deconstruction", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Deconstruction: context, key concepts, major facts, works and likely question angles."}, {"title": "Michel Foucault", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Michel Foucault: context, key concepts, major facts, works and likely question angles."}, {"title": "Reader-response theory", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Reader-response theory: context, key concepts, major facts, works and likely question angles."}, {"title": "Wolfgang Iser", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Wolfgang Iser: context, key concepts, major facts, works and likely question angles."}, {"title": "Stanley Fish", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Stanley Fish: context, key concepts, major facts, works and likely question angles."}, {"title": "Psychoanalytic criticism", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Psychoanalytic criticism: context, key concepts, major facts, works and likely question angles."}, {"title": "Sigmund Freud", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Sigmund Freud: context, key concepts, major facts, works and likely question angles."}, {"title": "Carl Jung", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Carl Jung: context, key concepts, major facts, works and likely question angles."}, {"title": "Feminist criticism", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Feminist criticism: context, key concepts, major facts, works and likely question angles."}, {"title": "Elaine Showalter", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Elaine Showalter: context, key concepts, major facts, works and likely question angles."}, {"title": "Simone de Beauvoir", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Simone de Beauvoir: context, key concepts, major facts, works and likely question angles."}, {"title": "Postcolonial criticism", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Postcolonial criticism: context, key concepts, major facts, works and likely question angles."}, {"title": "Edward Said", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Edward Said: context, key concepts, major facts, works and likely question angles."}, {"title": "Gayatri Spivak", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Gayatri Spivak: context, key concepts, major facts, works and likely question angles."}, {"title": "Homi K. Bhabha", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Homi K. Bhabha: context, key concepts, major facts, works and likely question angles."}, {"title": "Marxist criticism", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Marxist criticism: context, key concepts, major facts, works and likely question angles."}, {"title": "Georg Lukacs", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Georg Lukacs: context, key concepts, major facts, works and likely question angles."}, {"title": "Antonio Gramsci", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Antonio Gramsci: context, key concepts, major facts, works and likely question angles."}, {"title": "Cultural Studies", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Cultural Studies: context, key concepts, major facts, works and likely question angles."}, {"title": "Raymond Williams", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Raymond Williams: context, key concepts, major facts, works and likely question angles."}, {"title": "Queer theory", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Queer theory: context, key concepts, major facts, works and likely question angles."}, {"title": "Judith Butler", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Judith Butler: context, key concepts, major facts, works and likely question angles."}, {"title": "Ecocriticism", "area": "Theory & Criticism", "level": "Core", "description": "Exam-focused notes on Ecocriticism: context, key concepts, major facts, works and likely question angles."}, {"title": "Allegory", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Allegory: context, key concepts, major facts, works and likely question angles."}, {"title": "Alliteration", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Alliteration: context, key concepts, major facts, works and likely question angles."}, {"title": "Assonance", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Assonance: context, key concepts, major facts, works and likely question angles."}, {"title": "Blank verse", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Blank verse: context, key concepts, major facts, works and likely question angles."}, {"title": "Caesura", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Caesura: context, key concepts, major facts, works and likely question angles."}, {"title": "Couplet", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Couplet: context, key concepts, major facts, works and likely question angles."}, {"title": "Elegy", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Elegy: context, key concepts, major facts, works and likely question angles."}, {"title": "Epic", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Epic: context, key concepts, major facts, works and likely question angles."}, {"title": "Epigram", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Epigram: context, key concepts, major facts, works and likely question angles."}, {"title": "Free verse", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Free verse: context, key concepts, major facts, works and likely question angles."}, {"title": "Haiku", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Haiku: context, key concepts, major facts, works and likely question angles."}, {"title": "Heroic couplet", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Heroic couplet: context, key concepts, major facts, works and likely question angles."}, {"title": "Iambic pentameter", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Iambic pentameter: context, key concepts, major facts, works and likely question angles."}, {"title": "Irony", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Irony: context, key concepts, major facts, works and likely question angles."}, {"title": "Metaphor", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Metaphor: context, key concepts, major facts, works and likely question angles."}, {"title": "Metonymy", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Metonymy: context, key concepts, major facts, works and likely question angles."}, {"title": "Ode", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Ode: context, key concepts, major facts, works and likely question angles."}, {"title": "Oxymoron", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Oxymoron: context, key concepts, major facts, works and likely question angles."}, {"title": "Paradox", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Paradox: context, key concepts, major facts, works and likely question angles."}, {"title": "Personification", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Personification: context, key concepts, major facts, works and likely question angles."}, {"title": "Pun", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Pun: context, key concepts, major facts, works and likely question angles."}, {"title": "Satire", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Satire: context, key concepts, major facts, works and likely question angles."}, {"title": "Soliloquy", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Soliloquy: context, key concepts, major facts, works and likely question angles."}, {"title": "Sonnet", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Sonnet: context, key concepts, major facts, works and likely question angles."}, {"title": "Spenserian stanza", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Spenserian stanza: context, key concepts, major facts, works and likely question angles."}, {"title": "Stream of consciousness", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Stream of consciousness: context, key concepts, major facts, works and likely question angles."}, {"title": "Symbolism", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Symbolism: context, key concepts, major facts, works and likely question angles."}, {"title": "Synecdoche", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Synecdoche: context, key concepts, major facts, works and likely question angles."}, {"title": "Tragedy", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Tragedy: context, key concepts, major facts, works and likely question angles."}, {"title": "Tragic flaw", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Tragic flaw: context, key concepts, major facts, works and likely question angles."}, {"title": "Unreliable narrator", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Unreliable narrator: context, key concepts, major facts, works and likely question angles."}, {"title": "Dramatic monologue", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Dramatic monologue: context, key concepts, major facts, works and likely question angles."}, {"title": "Interior monologue", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Interior monologue: context, key concepts, major facts, works and likely question angles."}, {"title": "Frame narrative", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Frame narrative: context, key concepts, major facts, works and likely question angles."}, {"title": "Bildungsroman", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Bildungsroman: context, key concepts, major facts, works and likely question angles."}, {"title": "Picaresque novel", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Picaresque novel: context, key concepts, major facts, works and likely question angles."}, {"title": "Gothic novel", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Gothic novel: context, key concepts, major facts, works and likely question angles."}, {"title": "Novel of manners", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Novel of manners: context, key concepts, major facts, works and likely question angles."}, {"title": "Magic realism", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Magic realism: context, key concepts, major facts, works and likely question angles."}, {"title": "Epistolary novel", "area": "Forms & Devices", "level": "Core", "description": "Exam-focused notes on Epistolary novel: context, key concepts, major facts, works and likely question angles."}, {"title": "British Literature: Chronology", "area": "British Literature", "level": "Revision", "description": "A structured revision module for British Literature, focused on chronology."}, {"title": "British Literature: Major Movements", "area": "British Literature", "level": "Revision", "description": "A structured revision module for British Literature, focused on major movements."}, {"title": "British Literature: Key Terminology", "area": "British Literature", "level": "Revision", "description": "A structured revision module for British Literature, focused on key terminology."}, {"title": "British Literature: Important Authors", "area": "British Literature", "level": "Revision", "description": "A structured revision module for British Literature, focused on important authors."}, {"title": "British Literature: Major Works", "area": "British Literature", "level": "Revision", "description": "A structured revision module for British Literature, focused on major works."}, {"title": "British Literature: Critical Approaches", "area": "British Literature", "level": "Revision", "description": "A structured revision module for British Literature, focused on critical approaches."}, {"title": "British Literature: Frequently Confused Facts", "area": "British Literature", "level": "Revision", "description": "A structured revision module for British Literature, focused on frequently confused facts."}, {"title": "British Literature: Exam Revision Checklist", "area": "British Literature", "level": "Revision", "description": "A structured revision module for British Literature, focused on exam revision checklist."}, {"title": "American Literature: Chronology", "area": "American Literature", "level": "Revision", "description": "A structured revision module for American Literature, focused on chronology."}, {"title": "American Literature: Major Movements", "area": "American Literature", "level": "Revision", "description": "A structured revision module for American Literature, focused on major movements."}, {"title": "American Literature: Key Terminology", "area": "American Literature", "level": "Revision", "description": "A structured revision module for American Literature, focused on key terminology."}, {"title": "American Literature: Important Authors", "area": "American Literature", "level": "Revision", "description": "A structured revision module for American Literature, focused on important authors."}, {"title": "American Literature: Major Works", "area": "American Literature", "level": "Revision", "description": "A structured revision module for American Literature, focused on major works."}, {"title": "American Literature: Critical Approaches", "area": "American Literature", "level": "Revision", "description": "A structured revision module for American Literature, focused on critical approaches."}, {"title": "American Literature: Frequently Confused Facts", "area": "American Literature", "level": "Revision", "description": "A structured revision module for American Literature, focused on frequently confused facts."}, {"title": "American Literature: Exam Revision Checklist", "area": "American Literature", "level": "Revision", "description": "A structured revision module for American Literature, focused on exam revision checklist."}, {"title": "Indian Writing in English: Chronology", "area": "Indian Writing in English", "level": "Revision", "description": "A structured revision module for Indian Writing in English, focused on chronology."}, {"title": "Indian Writing in English: Major Movements", "area": "Indian Writing in English", "level": "Revision", "description": "A structured revision module for Indian Writing in English, focused on major movements."}, {"title": "Indian Writing in English: Key Terminology", "area": "Indian Writing in English", "level": "Revision", "description": "A structured revision module for Indian Writing in English, focused on key terminology."}, {"title": "Indian Writing in English: Important Authors", "area": "Indian Writing in English", "level": "Revision", "description": "A structured revision module for Indian Writing in English, focused on important authors."}, {"title": "Indian Writing in English: Major Works", "area": "Indian Writing in English", "level": "Revision", "description": "A structured revision module for Indian Writing in English, focused on major works."}, {"title": "Indian Writing in English: Critical Approaches", "area": "Indian Writing in English", "level": "Revision", "description": "A structured revision module for Indian Writing in English, focused on critical approaches."}, {"title": "Indian Writing in English: Frequently Confused Facts", "area": "Indian Writing in English", "level": "Revision", "description": "A structured revision module for Indian Writing in English, focused on frequently confused facts."}, {"title": "Indian Writing in English: Exam Revision Checklist", "area": "Indian Writing in English", "level": "Revision", "description": "A structured revision module for Indian Writing in English, focused on exam revision checklist."}, {"title": "Literary Theory: Chronology", "area": "Literary Theory", "level": "Revision", "description": "A structured revision module for Literary Theory, focused on chronology."}, {"title": "Literary Theory: Major Movements", "area": "Literary Theory", "level": "Revision", "description": "A structured revision module for Literary Theory, focused on major movements."}, {"title": "Literary Theory: Key Terminology", "area": "Literary Theory", "level": "Revision", "description": "A structured revision module for Literary Theory, focused on key terminology."}, {"title": "Literary Theory: Important Authors", "area": "Literary Theory", "level": "Revision", "description": "A structured revision module for Literary Theory, focused on important authors."}, {"title": "Literary Theory: Major Works", "area": "Literary Theory", "level": "Revision", "description": "A structured revision module for Literary Theory, focused on major works."}, {"title": "Literary Theory: Critical Approaches", "area": "Literary Theory", "level": "Revision", "description": "A structured revision module for Literary Theory, focused on critical approaches."}, {"title": "Literary Theory: Frequently Confused Facts", "area": "Literary Theory", "level": "Revision", "description": "A structured revision module for Literary Theory, focused on frequently confused facts."}, {"title": "Literary Theory: Exam Revision Checklist", "area": "Literary Theory", "level": "Revision", "description": "A structured revision module for Literary Theory, focused on exam revision checklist."}, {"title": "Drama: Chronology", "area": "Drama", "level": "Revision", "description": "A structured revision module for Drama, focused on chronology."}, {"title": "Drama: Major Movements", "area": "Drama", "level": "Revision", "description": "A structured revision module for Drama, focused on major movements."}, {"title": "Drama: Key Terminology", "area": "Drama", "level": "Revision", "description": "A structured revision module for Drama, focused on key terminology."}, {"title": "Drama: Important Authors", "area": "Drama", "level": "Revision", "description": "A structured revision module for Drama, focused on important authors."}, {"title": "Drama: Major Works", "area": "Drama", "level": "Revision", "description": "A structured revision module for Drama, focused on major works."}, {"title": "Drama: Critical Approaches", "area": "Drama", "level": "Revision", "description": "A structured revision module for Drama, focused on critical approaches."}, {"title": "Drama: Frequently Confused Facts", "area": "Drama", "level": "Revision", "description": "A structured revision module for Drama, focused on frequently confused facts."}, {"title": "Drama: Exam Revision Checklist", "area": "Drama", "level": "Revision", "description": "A structured revision module for Drama, focused on exam revision checklist."}, {"title": "Poetry: Chronology", "area": "Poetry", "level": "Revision", "description": "A structured revision module for Poetry, focused on chronology."}, {"title": "Poetry: Major Movements", "area": "Poetry", "level": "Revision", "description": "A structured revision module for Poetry, focused on major movements."}, {"title": "Poetry: Key Terminology", "area": "Poetry", "level": "Revision", "description": "A structured revision module for Poetry, focused on key terminology."}, {"title": "Poetry: Important Authors", "area": "Poetry", "level": "Revision", "description": "A structured revision module for Poetry, focused on important authors."}, {"title": "Poetry: Major Works", "area": "Poetry", "level": "Revision", "description": "A structured revision module for Poetry, focused on major works."}, {"title": "Poetry: Critical Approaches", "area": "Poetry", "level": "Revision", "description": "A structured revision module for Poetry, focused on critical approaches."}, {"title": "Poetry: Frequently Confused Facts", "area": "Poetry", "level": "Revision", "description": "A structured revision module for Poetry, focused on frequently confused facts."}, {"title": "Poetry: Exam Revision Checklist", "area": "Poetry", "level": "Revision", "description": "A structured revision module for Poetry, focused on exam revision checklist."}, {"title": "Fiction: Chronology", "area": "Fiction", "level": "Revision", "description": "A structured revision module for Fiction, focused on chronology."}, {"title": "Fiction: Major Movements", "area": "Fiction", "level": "Revision", "description": "A structured revision module for Fiction, focused on major movements."}, {"title": "Fiction: Key Terminology", "area": "Fiction", "level": "Revision", "description": "A structured revision module for Fiction, focused on key terminology."}, {"title": "Fiction: Important Authors", "area": "Fiction", "level": "Revision", "description": "A structured revision module for Fiction, focused on important authors."}, {"title": "Fiction: Major Works", "area": "Fiction", "level": "Revision", "description": "A structured revision module for Fiction, focused on major works."}, {"title": "Fiction: Critical Approaches", "area": "Fiction", "level": "Revision", "description": "A structured revision module for Fiction, focused on critical approaches."}, {"title": "Fiction: Frequently Confused Facts", "area": "Fiction", "level": "Revision", "description": "A structured revision module for Fiction, focused on frequently confused facts."}, {"title": "Fiction: Exam Revision Checklist", "area": "Fiction", "level": "Revision", "description": "A structured revision module for Fiction, focused on exam revision checklist."}, {"title": "Research & Teaching: Chronology", "area": "Research & Teaching", "level": "Revision", "description": "A structured revision module for Research & Teaching, focused on chronology."}, {"title": "Research & Teaching: Major Movements", "area": "Research & Teaching", "level": "Revision", "description": "A structured revision module for Research & Teaching, focused on major movements."}, {"title": "Research & Teaching: Key Terminology", "area": "Research & Teaching", "level": "Revision", "description": "A structured revision module for Research & Teaching, focused on key terminology."}, {"title": "Research & Teaching: Important Authors", "area": "Research & Teaching", "level": "Revision", "description": "A structured revision module for Research & Teaching, focused on important authors."}, {"title": "Research & Teaching: Major Works", "area": "Research & Teaching", "level": "Revision", "description": "A structured revision module for Research & Teaching, focused on major works."}, {"title": "Research & Teaching: Critical Approaches", "area": "Research & Teaching", "level": "Revision", "description": "A structured revision module for Research & Teaching, focused on critical approaches."}, {"title": "Research & Teaching: Frequently Confused Facts", "area": "Research & Teaching", "level": "Revision", "description": "A structured revision module for Research & Teaching, focused on frequently confused facts."}, {"title": "Research & Teaching: Exam Revision Checklist", "area": "Research & Teaching", "level": "Revision", "description": "A structured revision module for Research & Teaching, focused on exam revision checklist."}];
 const AUTHORS=[{"name": "William Shakespeare", "period": "Renaissance", "focus": "Drama, Poetry", "works": "Hamlet; Macbeth; Othello; King Lear; The Tempest"}, {"name": "Geoffrey Chaucer", "period": "Middle English", "focus": "Poetry, Narrative", "works": "The Canterbury Tales; Troilus and Criseyde"}, {"name": "Edmund Spenser", "period": "Renaissance", "focus": "Poetry", "works": "The Faerie Queene; Amoretti"}, {"name": "Christopher Marlowe", "period": "Renaissance", "focus": "Drama", "works": "Doctor Faustus; Tamburlaine"}, {"name": "Ben Jonson", "period": "Renaissance", "focus": "Drama", "works": "Volpone; The Alchemist"}, {"name": "John Donne", "period": "Renaissance", "focus": "Poetry", "works": "The Flea; A Valediction: Forbidding Mourning; Holy Sonnets"}, {"name": "John Milton", "period": "17th Century", "focus": "Poetry, Prose", "works": "Paradise Lost; Areopagitica"}, {"name": "John Dryden", "period": "Restoration", "focus": "Poetry, Criticism", "works": "Absalom and Achitophel; An Essay of Dramatic Poesy"}, {"name": "Alexander Pope", "period": "18th Century", "focus": "Poetry", "works": "The Rape of the Lock; An Essay on Criticism"}, {"name": "Jonathan Swift", "period": "18th Century", "focus": "Prose, Satire", "works": "Gulliver's Travels; A Modest Proposal"}, {"name": "Samuel Johnson", "period": "18th Century", "focus": "Criticism, Prose", "works": "Preface to Shakespeare; Dictionary"}, {"name": "William Wordsworth", "period": "Romantic", "focus": "Poetry", "works": "Lyrical Ballads; Tintern Abbey; The Prelude"}, {"name": "S. T. Coleridge", "period": "Romantic", "focus": "Poetry, Criticism", "works": "The Rime of the Ancient Mariner; Biographia Literaria"}, {"name": "Lord Byron", "period": "Romantic", "focus": "Poetry", "works": "Childe Harold's Pilgrimage; Don Juan"}, {"name": "P. B. Shelley", "period": "Romantic", "focus": "Poetry", "works": "Ode to the West Wind; Adonais"}, {"name": "John Keats", "period": "Romantic", "focus": "Poetry", "works": "Ode to a Nightingale; Ode on a Grecian Urn"}, {"name": "Jane Austen", "period": "Romantic-era", "focus": "Fiction", "works": "Pride and Prejudice; Emma; Sense and Sensibility"}, {"name": "Charles Dickens", "period": "Victorian", "focus": "Fiction", "works": "Great Expectations; Oliver Twist; A Tale of Two Cities"}, {"name": "George Eliot", "period": "Victorian", "focus": "Fiction", "works": "Middlemarch; The Mill on the Floss"}, {"name": "Thomas Hardy", "period": "Victorian", "focus": "Fiction, Poetry", "works": "Tess of the d'Urbervilles; Jude the Obscure"}, {"name": "Oscar Wilde", "period": "Victorian", "focus": "Drama, Prose", "works": "The Importance of Being Earnest; The Picture of Dorian Gray"}, {"name": "T. S. Eliot", "period": "Modern", "focus": "Poetry, Criticism", "works": "The Waste Land; Prufrock; Four Quartets"}, {"name": "W. B. Yeats", "period": "Modern", "focus": "Poetry", "works": "The Second Coming; Sailing to Byzantium"}, {"name": "James Joyce", "period": "Modern", "focus": "Fiction", "works": "Ulysses; Dubliners; A Portrait of the Artist as a Young Man"}, {"name": "Virginia Woolf", "period": "Modern", "focus": "Fiction, Criticism", "works": "Mrs Dalloway; To the Lighthouse; A Room of One's Own"}, {"name": "George Bernard Shaw", "period": "Modern", "focus": "Drama", "works": "Arms and the Man; Pygmalion; Man and Superman"}, {"name": "Samuel Beckett", "period": "Postwar", "focus": "Drama", "works": "Waiting for Godot; Endgame"}, {"name": "Ralph Waldo Emerson", "period": "American", "focus": "Prose", "works": "Self-Reliance; Nature"}, {"name": "Edgar Allan Poe", "period": "American", "focus": "Poetry, Fiction", "works": "The Raven; The Tell-Tale Heart"}, {"name": "Walt Whitman", "period": "American", "focus": "Poetry", "works": "Leaves of Grass; Song of Myself"}, {"name": "Emily Dickinson", "period": "American", "focus": "Poetry", "works": "Selected poems; 'Because I could not stop for Death'"}, {"name": "Robert Frost", "period": "American", "focus": "Poetry", "works": "The Road Not Taken; Mending Wall"}, {"name": "F. Scott Fitzgerald", "period": "American", "focus": "Fiction", "works": "The Great Gatsby"}, {"name": "Ernest Hemingway", "period": "American", "focus": "Fiction", "works": "The Old Man and the Sea; A Farewell to Arms"}, {"name": "Toni Morrison", "period": "American", "focus": "Fiction", "works": "Beloved; Song of Solomon"}, {"name": "R. K. Narayan", "period": "Indian English", "focus": "Fiction", "works": "The Guide; Swami and Friends; Malgudi Days"}, {"name": "Mulk Raj Anand", "period": "Indian English", "focus": "Fiction", "works": "Untouchable; Coolie"}, {"name": "Raja Rao", "period": "Indian English", "focus": "Fiction", "works": "Kanthapura; The Serpent and the Rope"}, {"name": "Nissim Ezekiel", "period": "Indian English", "focus": "Poetry", "works": "Night of the Scorpion; The Patriot"}, {"name": "A. K. Ramanujan", "period": "Indian English", "focus": "Poetry, Translation", "works": "Obituary; Relations"}, {"name": "Kamala Das", "period": "Indian English", "focus": "Poetry", "works": "An Introduction; My Story"}, {"name": "Toru Dutt", "period": "Indian English", "focus": "Poetry", "works": "Ancient Ballads and Legends of Hindustan"}, {"name": "Salman Rushdie", "period": "Indian English", "focus": "Fiction", "works": "Midnight's Children; Shame"}, {"name": "Amitav Ghosh", "period": "Indian English", "focus": "Fiction", "works": "The Shadow Lines; The Glass Palace"}, {"name": "Arundhati Roy", "period": "Indian English", "focus": "Fiction", "works": "The God of Small Things"}, {"name": "Mahesh Dattani", "period": "Indian English", "focus": "Drama", "works": "Final Solutions; Tara"}, {"name": "Girish Karnad", "period": "Indian English", "focus": "Drama", "works": "Tughlaq; Hayavadana"}, {"name": "Plato", "period": "Classical Criticism", "focus": "Theory", "works": "Republic; Ion"}, {"name": "Aristotle", "period": "Classical Criticism", "focus": "Theory", "works": "Poetics"}, {"name": "Philip Sidney", "period": "Renaissance Criticism", "focus": "Criticism", "works": "An Apology for Poetry"}, {"name": "Matthew Arnold", "period": "Victorian Criticism", "focus": "Criticism", "works": "The Study of Poetry; Culture and Anarchy"}, {"name": "I. A. Richards", "period": "Modern Criticism", "focus": "Criticism", "works": "Practical Criticism; Principles of Literary Criticism"}, {"name": "T. E. Hulme", "period": "Modernism", "focus": "Criticism", "works": "Speculations; Imagism context"}, {"name": "Cleanth Brooks", "period": "New Criticism", "focus": "Criticism", "works": "The Well Wrought Urn"}, {"name": "Ferdinand de Saussure", "period": "Structuralism", "focus": "Theory", "works": "Course in General Linguistics"}, {"name": "Roland Barthes", "period": "Structuralism/Post-structuralism", "focus": "Theory", "works": "The Death of the Author; Mythologies"}, {"name": "Jacques Derrida", "period": "Post-structuralism", "focus": "Theory", "works": "Of Grammatology"}, {"name": "Michel Foucault", "period": "Post-structuralism", "focus": "Theory", "works": "Discipline and Punish; The Archaeology of Knowledge"}, {"name": "Elaine Showalter", "period": "Feminism", "focus": "Theory", "works": "A Literature of Their Own; gynocriticism"}, {"name": "Edward Said", "period": "Postcolonialism", "focus": "Theory", "works": "Orientalism; Culture and Imperialism"}, {"name": "Gayatri Chakravorty Spivak", "period": "Postcolonialism", "focus": "Theory", "works": "Can the Subaltern Speak?"}, {"name": "Homi K. Bhabha", "period": "Postcolonialism", "focus": "Theory", "works": "The Location of Culture"}];
 const TIMELINE=[{"date": "c. 700–1100", "period": "Old English", "note": "Beowulf and Anglo-Saxon literature"}, {"date": "1066–1350", "period": "Early Middle English", "note": "Norman influence and linguistic transition"}, {"date": "c. 1340–1400", "period": "Age of Chaucer", "note": "Chaucer and major Middle English writing"}, {"date": "1500–1660", "period": "Renaissance", "note": "Humanism, Reformation, Elizabethan and Jacobean writing"}, {"date": "1660–1700", "period": "Restoration", "note": "Restoration drama and satire"}, {"date": "1700–1798", "period": "18th Century", "note": "Neoclassicism, satire, rise of the novel"}, {"date": "1798–1837", "period": "Romantic", "note": "Lyrical Ballads, Romantic poetry and imagination"}, {"date": "1837–1901", "period": "Victorian", "note": "Industrial society, realism, dramatic monologue"}, {"date": "1901–1945", "period": "Modern", "note": "Modernism, experimentation, fragmentation"}, {"date": "1945–present", "period": "Postwar & Contemporary", "note": "Postcolonial, multicultural and contemporary writing"}];
 const QUESTIONS=[{"id": 1, "question": "Who wrote The Defence of Poesy?", "answer": "Philip Sidney", "options": ["John Dryden", "Samuel Johnson", "Philip Sidney", "Ben Jonson"], "type": "Practice MCQ"}, {"id": 2, "question": "Which work is by John Donne?", "answer": "The Flea", "options": ["The Flea", "The Rape of the Lock", "Dover Beach", "Adonais"], "type": "Practice MCQ"}, {"id": 3, "question": "Negative Capability is associated with:", "answer": "John Keats", "options": ["John Keats", "Wordsworth", "Arnold", "Eliot"], "type": "Practice MCQ"}, {"id": 4, "question": "The Waste Land was published in:", "answer": "1922", "options": ["1914", "1922", "1930", "1945"], "type": "Practice MCQ"}, {"id": 5, "question": "Who wrote The Rime of the Ancient Mariner?", "answer": "S. T. Coleridge", "options": ["Wordsworth", "S. T. Coleridge", "Shelley", "Byron"], "type": "Practice MCQ"}, {"id": 6, "question": "Aristotle's major work on literary theory is:", "answer": "Poetics", "options": ["Republic", "Poetics", "On the Sublime", "The Arte of English Poesie"], "type": "Practice MCQ"}, {"id": 7, "question": "Orientalism was written by:", "answer": "Edward Said", "options": ["Homi Bhabha", "Edward Said", "Spivak", "Foucault"], "type": "Practice MCQ"}, {"id": 8, "question": "The Guide was written by:", "answer": "R. K. Narayan", "options": ["Mulk Raj Anand", "Raja Rao", "R. K. Narayan", "Vikram Seth"], "type": "Practice MCQ"}, {"id": 9, "question": "Waiting for Godot is by:", "answer": "Samuel Beckett", "options": ["Harold Pinter", "Samuel Beckett", "Eugene O'Neill", "Arthur Miller"], "type": "Practice MCQ"}, {"id": 10, "question": "The Great Gatsby was written by:", "answer": "F. Scott Fitzgerald", "options": ["Fitzgerald", "Hemingway", "Faulkner", "Steinbeck"], "type": "Practice MCQ"}, {"id": 11, "question": "The phrase 'touchstone method' is associated with:", "answer": "Matthew Arnold", "options": ["T. S. Eliot", "Matthew Arnold", "I. A. Richards", "Cleanth Brooks"], "type": "Practice MCQ"}, {"id": 12, "question": "The Canterbury Tales is associated with:", "answer": "Geoffrey Chaucer", "options": ["Geoffrey Chaucer", "John Gower", "William Langland", "Thomas Malory"], "type": "Practice MCQ"}, {"id": 13, "question": "Doctor Faustus is by:", "answer": "Christopher Marlowe", "options": ["Ben Jonson", "Christopher Marlowe", "Thomas Kyd", "John Webster"], "type": "Practice MCQ"}, {"id": 14, "question": "The Rape of the Lock is by:", "answer": "Alexander Pope", "options": ["Dryden", "Pope", "Swift", "Johnson"], "type": "Practice MCQ"}, {"id": 15, "question": "Mrs Dalloway is by:", "answer": "Virginia Woolf", "options": ["Virginia Woolf", "Doris Lessing", "George Eliot", "Jean Rhys"], "type": "Practice MCQ"}, {"id": 16, "question": "A Room of One's Own is by:", "answer": "Virginia Woolf", "options": ["Virginia Woolf", "Elaine Showalter", "Simone de Beauvoir", "Kate Millett"], "type": "Practice MCQ"}, {"id": 17, "question": "The Death of the Author is associated with:", "answer": "Roland Barthes", "options": ["Derrida", "Barthes", "Foucault", "Said"], "type": "Practice MCQ"}, {"id": 18, "question": "Can the Subaltern Speak? is associated with:", "answer": "Gayatri Chakravorty Spivak", "options": ["Spivak", "Showalter", "Butler", "Bhabha"], "type": "Practice MCQ"}, {"id": 19, "question": "The Second Coming is by:", "answer": "W. B. Yeats", "options": ["Eliot", "Yeats", "Auden", "Pound"], "type": "Practice MCQ"}, {"id": 20, "question": "Beloved is by:", "answer": "Toni Morrison", "options": ["Toni Morrison", "Alice Walker", "Zora Neale Hurston", "Maya Angelou"], "type": "Practice MCQ"}, {"id": 21, "question": "Which writer wrote The Defence of Poesy?", "answer": "Philip Sidney", "options": ["John Dryden", "Samuel Johnson", "Philip Sidney", "Ben Jonson"], "type": "Practice MCQ"}, {"id": 22, "question": "Which work is by John Donne?", "answer": "The Flea", "options": ["The Flea", "The Rape of the Lock", "Dover Beach", "Adonais"], "type": "Practice MCQ"}, {"id": 23, "question": "Negative Capability is associated with:", "answer": "John Keats", "options": ["John Keats", "Wordsworth", "Arnold", "Eliot"], "type": "Practice MCQ"}, {"id": 24, "question": "The Waste Land was published in:", "answer": "1922", "options": ["1914", "1922", "1930", "1945"], "type": "Practice MCQ"}, {"id": 25, "question": "Which writer wrote The Rime of the Ancient Mariner?", "answer": "S. T. Coleridge", "options": ["Wordsworth", "S. T. Coleridge", "Shelley", "Byron"], "type": "Practice MCQ"}, {"id": 26, "question": "Aristotle's major work on literary theory is:", "answer": "Poetics", "options": ["Republic", "Poetics", "On the Sublime", "The Arte of English Poesie"], "type": "Practice MCQ"}, {"id": 27, "question": "Orientalism was written by:", "answer": "Edward Said", "options": ["Homi Bhabha", "Edward Said", "Spivak", "Foucault"], "type": "Practice MCQ"}, {"id": 28, "question": "The Guide was written by:", "answer": "R. K. Narayan", "options": ["Mulk Raj Anand", "Raja Rao", "R. K. Narayan", "Vikram Seth"], "type": "Practice MCQ"}, {"id": 29, "question": "Waiting for Godot is by:", "answer": "Samuel Beckett", "options": ["Harold Pinter", "Samuel Beckett", "Eugene O'Neill", "Arthur Miller"], "type": "Practice MCQ"}, {"id": 30, "question": "The Great Gatsby was written by:", "answer": "F. Scott Fitzgerald", "options": ["Fitzgerald", "Hemingway", "Faulkner", "Steinbeck"], "type": "Practice MCQ"}, {"id": 31, "question": "The phrase 'touchstone method' is associated with:", "answer": "Matthew Arnold", "options": ["T. S. Eliot", "Matthew Arnold", "I. A. Richards", "Cleanth Brooks"], "type": "Practice MCQ"}, {"id": 32, "question": "The Canterbury Tales is associated with:", "answer": "Geoffrey Chaucer", "options": ["Geoffrey Chaucer", "John Gower", "William Langland", "Thomas Malory"], "type": "Practice MCQ"}, {"id": 33, "question": "Doctor Faustus is by:", "answer": "Christopher Marlowe", "options": ["Ben Jonson", "Christopher Marlowe", "Thomas Kyd", "John Webster"], "type": "Practice MCQ"}, {"id": 34, "question": "The Rape of the Lock is by:", "answer": "Alexander Pope", "options": ["Dryden", "Pope", "Swift", "Johnson"], "type": "Practice MCQ"}, {"id": 35, "question": "Mrs Dalloway is by:", "answer": "Virginia Woolf", "options": ["Virginia Woolf", "Doris Lessing", "George Eliot", "Jean Rhys"], "type": "Practice MCQ"}, {"id": 36, "question": "A Room of One's Own is by:", "answer": "Virginia Woolf", "options": ["Virginia Woolf", "Elaine Showalter", "Simone de Beauvoir", "Kate Millett"], "type": "Practice MCQ"}, {"id": 37, "question": "The Death of the Author is associated with:", "answer": "Roland Barthes", "options": ["Derrida", "Barthes", "Foucault", "Said"], "type": "Practice MCQ"}, {"id": 38, "question": "Can the Subaltern Speak? is associated with:", "answer": "Gayatri Chakravorty Spivak", "options": ["Spivak", "Showalter", "Butler", "Bhabha"], "type": "Practice MCQ"}, {"id": 39, "question": "The Second Coming is by:", "answer": "W. B. Yeats", "options": ["Eliot", "Yeats", "Auden", "Pound"], "type": "Practice MCQ"}, {"id": 40, "question": "Beloved is by:", "answer": "Toni Morrison", "options": ["Toni Morrison", "Alice Walker", "Zora Neale Hurston", "Maya Angelou"], "type": "Practice MCQ"}, {"id": 41, "question": "Which writer wrote The Defence of Poesy?", "answer": "Philip Sidney", "options": ["John Dryden", "Samuel Johnson", "Philip Sidney", "Ben Jonson"], "type": "Practice MCQ"}, {"id": 42, "question": "Which work is by John Donne?", "answer": "The Flea", "options": ["The Flea", "The Rape of the Lock", "Dover Beach", "Adonais"], "type": "Practice MCQ"}, {"id": 43, "question": "Negative Capability is associated with:", "answer": "John Keats", "options": ["John Keats", "Wordsworth", "Arnold", "Eliot"], "type": "Practice MCQ"}, {"id": 44, "question": "The Waste Land was published in:", "answer": "1922", "options": ["1914", "1922", "1930", "1945"], "type": "Practice MCQ"}, {"id": 45, "question": "Which writer wrote The Rime of the Ancient Mariner?", "answer": "S. T. Coleridge", "options": ["Wordsworth", "S. T. Coleridge", "Shelley", "Byron"], "type": "Practice MCQ"}, {"id": 46, "question": "Aristotle's major work on literary theory is:", "answer": "Poetics", "options": ["Republic", "Poetics", "On the Sublime", "The Arte of English Poesie"], "type": "Practice MCQ"}, {"id": 47, "question": "Orientalism was written by:", "answer": "Edward Said", "options": ["Homi Bhabha", "Edward Said", "Spivak", "Foucault"], "type": "Practice MCQ"}, {"id": 48, "question": "The Guide was written by:", "answer": "R. K. Narayan", "options": ["Mulk Raj Anand", "Raja Rao", "R. K. Narayan", "Vikram Seth"], "type": "Practice MCQ"}, {"id": 49, "question": "Waiting for Godot is by:", "answer": "Samuel Beckett", "options": ["Harold Pinter", "Samuel Beckett", "Eugene O'Neill", "Arthur Miller"], "type": "Practice MCQ"}, {"id": 50, "question": "The Great Gatsby was written by:", "answer": "F. Scott Fitzgerald", "options": ["Fitzgerald", "Hemingway", "Faulkner", "Steinbeck"], "type": "Practice MCQ"}, {"id": 51, "question": "The phrase 'touchstone method' is associated with:", "answer": "Matthew Arnold", "options": ["T. S. Eliot", "Matthew Arnold", "I. A. Richards", "Cleanth Brooks"], "type": "Practice MCQ"}, {"id": 52, "question": "The Canterbury Tales is associated with:", "answer": "Geoffrey Chaucer", "options": ["Geoffrey Chaucer", "John Gower", "William Langland", "Thomas Malory"], "type": "Practice MCQ"}, {"id": 53, "question": "Doctor Faustus is by:", "answer": "Christopher Marlowe", "options": ["Ben Jonson", "Christopher Marlowe", "Thomas Kyd", "John Webster"], "type": "Practice MCQ"}, {"id": 54, "question": "The Rape of the Lock is by:", "answer": "Alexander Pope", "options": ["Dryden", "Pope", "Swift", "Johnson"], "type": "Practice MCQ"}, {"id": 55, "question": "Mrs Dalloway is by:", "answer": "Virginia Woolf", "options": ["Virginia Woolf", "Doris Lessing", "George Eliot", "Jean Rhys"], "type": "Practice MCQ"}, {"id": 56, "question": "A Room of One's Own is by:", "answer": "Virginia Woolf", "options": ["Virginia Woolf", "Elaine Showalter", "Simone de Beauvoir", "Kate Millett"], "type": "Practice MCQ"}, {"id": 57, "question": "The Death of the Author is associated with:", "answer": "Roland Barthes", "options": ["Derrida", "Barthes", "Foucault", "Said"], "type": "Practice MCQ"}, {"id": 58, "question": "Can the Subaltern Speak? is associated with:", "answer": "Gayatri Chakravorty Spivak", "options": ["Spivak", "Showalter", "Butler", "Bhabha"], "type": "Practice MCQ"}, {"id": 59, "question": "The Second Coming is by:", "answer": "W. B. Yeats", "options": ["Eliot", "Yeats", "Auden", "Pound"], "type": "Practice MCQ"}, {"id": 60, "question": "Beloved is by:", "answer": "Toni Morrison", "options": ["Toni Morrison", "Alice Walker", "Zora Neale Hurston", "Maya Angelou"], "type": "Practice MCQ"}, {"id": 61, "question": "Which writer wrote The Defence of Poesy?", "answer": "Philip Sidney", "options": ["John Dryden", "Samuel Johnson", "Philip Sidney", "Ben Jonson"], "type": "Practice MCQ"}, {"id": 62, "question": "Which work is by John Donne?", "answer": "The Flea", "options": ["The Flea", "The Rape of the Lock", "Dover Beach", "Adonais"], "type": "Practice MCQ"}, {"id": 63, "question": "Negative Capability is associated with:", "answer": "John Keats", "options": ["John Keats", "Wordsworth", "Arnold", "Eliot"], "type": "Practice MCQ"}, {"id": 64, "question": "The Waste Land was published in:", "answer": "1922", "options": ["1914", "1922", "1930", "1945"], "type": "Practice MCQ"}, {"id": 65, "question": "Which writer wrote The Rime of the Ancient Mariner?", "answer": "S. T. Coleridge", "options": ["Wordsworth", "S. T. Coleridge", "Shelley", "Byron"], "type": "Practice MCQ"}, {"id": 66, "question": "Aristotle's major work on literary theory is:", "answer": "Poetics", "options": ["Republic", "Poetics", "On the Sublime", "The Arte of English Poesie"], "type": "Practice MCQ"}, {"id": 67, "question": "Orientalism was written by:", "answer": "Edward Said", "options": ["Homi Bhabha", "Edward Said", "Spivak", "Foucault"], "type": "Practice MCQ"}, {"id": 68, "question": "The Guide was written by:", "answer": "R. K. Narayan", "options": ["Mulk Raj Anand", "Raja Rao", "R. K. Narayan", "Vikram Seth"], "type": "Practice MCQ"}, {"id": 69, "question": "Waiting for Godot is by:", "answer": "Samuel Beckett", "options": ["Harold Pinter", "Samuel Beckett", "Eugene O'Neill", "Arthur Miller"], "type": "Practice MCQ"}, {"id": 70, "question": "The Great Gatsby was written by:", "answer": "F. Scott Fitzgerald", "options": ["Fitzgerald", "Hemingway", "Faulkner", "Steinbeck"], "type": "Practice MCQ"}, {"id": 71, "question": "The phrase 'touchstone method' is associated with:", "answer": "Matthew Arnold", "options": ["T. S. Eliot", "Matthew Arnold", "I. A. Richards", "Cleanth Brooks"], "type": "Practice MCQ"}, {"id": 72, "question": "The Canterbury Tales is associated with:", "answer": "Geoffrey Chaucer", "options": ["Geoffrey Chaucer", "John Gower", "William Langland", "Thomas Malory"], "type": "Practice MCQ"}, {"id": 73, "question": "Doctor Faustus is by:", "answer": "Christopher Marlowe", "options": ["Ben Jonson", "Christopher Marlowe", "Thomas Kyd", "John Webster"], "type": "Practice MCQ"}, {"id": 74, "question": "The Rape of the Lock is by:", "answer": "Alexander Pope", "options": ["Dryden", "Pope", "Swift", "Johnson"], "type": "Practice MCQ"}, {"id": 75, "question": "Mrs Dalloway is by:", "answer": "Virginia Woolf", "options": ["Virginia Woolf", "Doris Lessing", "George Eliot", "Jean Rhys"], "type": "Practice MCQ"}, {"id": 76, "question": "A Room of One's Own is by:", "answer": "Virginia Woolf", "options": ["Virginia Woolf", "Elaine Showalter", "Simone de Beauvoir", "Kate Millett"], "type": "Practice MCQ"}, {"id": 77, "question": "The Death of the Author is associated with:", "answer": "Roland Barthes", "options": ["Derrida", "Barthes", "Foucault", "Said"], "type": "Practice MCQ"}, {"id": 78, "question": "Can the Subaltern Speak? is associated with:", "answer": "Gayatri Chakravorty Spivak", "options": ["Spivak", "Showalter", "Butler", "Bhabha"], "type": "Practice MCQ"}, {"id": 79, "question": "The Second Coming is by:", "answer": "W. B. Yeats", "options": ["Eliot", "Yeats", "Auden", "Pound"], "type": "Practice MCQ"}, {"id": 80, "question": "Beloved is by:", "answer": "Toni Morrison", "options": ["Toni Morrison", "Alice Walker", "Zora Neale Hurston", "Maya Angelou"], "type": "Practice MCQ"}, {"id": 81, "question": "Which writer wrote The Defence of Poesy?", "answer": "Philip Sidney", "options": ["John Dryden", "Samuel Johnson", "Philip Sidney", "Ben Jonson"], "type": "Practice MCQ"}, {"id": 82, "question": "Which work is by John Donne?", "answer": "The Flea", "options": ["The Flea", "The Rape of the Lock", "Dover Beach", "Adonais"], "type": "Practice MCQ"}, {"id": 83, "question": "Negative Capability is associated with:", "answer": "John Keats", "options": ["John Keats", "Wordsworth", "Arnold", "Eliot"], "type": "Practice MCQ"}, {"id": 84, "question": "The Waste Land was published in:", "answer": "1922", "options": ["1914", "1922", "1930", "1945"], "type": "Practice MCQ"}, {"id": 85, "question": "Which writer wrote The Rime of the Ancient Mariner?", "answer": "S. T. Coleridge", "options": ["Wordsworth", "S. T. Coleridge", "Shelley", "Byron"], "type": "Practice MCQ"}, {"id": 86, "question": "Aristotle's major work on literary theory is:", "answer": "Poetics", "options": ["Republic", "Poetics", "On the Sublime", "The Arte of English Poesie"], "type": "Practice MCQ"}, {"id": 87, "question": "Orientalism was written by:", "answer": "Edward Said", "options": ["Homi Bhabha", "Edward Said", "Spivak", "Foucault"], "type": "Practice MCQ"}, {"id": 88, "question": "The Guide was written by:", "answer": "R. K. Narayan", "options": ["Mulk Raj Anand", "Raja Rao", "R. K. Narayan", "Vikram Seth"], "type": "Practice MCQ"}, {"id": 89, "question": "Waiting for Godot is by:", "answer": "Samuel Beckett", "options": ["Harold Pinter", "Samuel Beckett", "Eugene O'Neill", "Arthur Miller"], "type": "Practice MCQ"}, {"id": 90, "question": "The Great Gatsby was written by:", "answer": "F. Scott Fitzgerald", "options": ["Fitzgerald", "Hemingway", "Faulkner", "Steinbeck"], "type": "Practice MCQ"}, {"id": 91, "question": "The phrase 'touchstone method' is associated with:", "answer": "Matthew Arnold", "options": ["T. S. Eliot", "Matthew Arnold", "I. A. Richards", "Cleanth Brooks"], "type": "Practice MCQ"}, {"id": 92, "question": "The Canterbury Tales is associated with:", "answer": "Geoffrey Chaucer", "options": ["Geoffrey Chaucer", "John Gower", "William Langland", "Thomas Malory"], "type": "Practice MCQ"}, {"id": 93, "question": "Doctor Faustus is by:", "answer": "Christopher Marlowe", "options": ["Ben Jonson", "Christopher Marlowe", "Thomas Kyd", "John Webster"], "type": "Practice MCQ"}, {"id": 94, "question": "The Rape of the Lock is by:", "answer": "Alexander Pope", "options": ["Dryden", "Pope", "Swift", "Johnson"], "type": "Practice MCQ"}, {"id": 95, "question": "Mrs Dalloway is by:", "answer": "Virginia Woolf", "options": ["Virginia Woolf", "Doris Lessing", "George Eliot", "Jean Rhys"], "type": "Practice MCQ"}, {"id": 96, "question": "A Room of One's Own is by:", "answer": "Virginia Woolf", "options": ["Virginia Woolf", "Elaine Showalter", "Simone de Beauvoir", "Kate Millett"], "type": "Practice MCQ"}, {"id": 97, "question": "The Death of the Author is associated with:", "answer": "Roland Barthes", "options": ["Derrida", "Barthes", "Foucault", "Said"], "type": "Practice MCQ"}, {"id": 98, "question": "Can the Subaltern Speak? is associated with:", "answer": "Gayatri Chakravorty Spivak", "options": ["Spivak", "Showalter", "Butler", "Bhabha"], "type": "Practice MCQ"}, {"id": 99, "question": "The Second Coming is by:", "answer": "W. B. Yeats", "options": ["Eliot", "Yeats", "Auden", "Pound"], "type": "Practice MCQ"}, {"id": 100, "question": "Beloved is by:", "answer": "Toni Morrison", "options": ["Toni Morrison", "Alice Walker", "Zora Neale Hurston", "Maya Angelou"], "type": "Practice MCQ"}, {"id": 101, "question": "Which writer wrote The Defence of Poesy?", "answer": "Philip Sidney", "options": ["John Dryden", "Samuel Johnson", "Philip Sidney", "Ben Jonson"], "type": "Practice MCQ"}, {"id": 102, "question": "Which work is by John Donne?", "answer": "The Flea", "options": ["The Flea", "The Rape of the Lock", "Dover Beach", "Adonais"], "type": "Practice MCQ"}, {"id": 103, "question": "Negative Capability is associated with:", "answer": "John Keats", "options": ["John Keats", "Wordsworth", "Arnold", "Eliot"], "type": "Practice MCQ"}, {"id": 104, "question": "The Waste Land was published in:", "answer": "1922", "options": ["1914", "1922", "1930", "1945"], "type": "Practice MCQ"}, {"id": 105, "question": "Which writer wrote The Rime of the Ancient Mariner?", "answer": "S. T. Coleridge", "options": ["Wordsworth", "S. T. Coleridge", "Shelley", "Byron"], "type": "Practice MCQ"}, {"id": 106, "question": "Aristotle's major work on literary theory is:", "answer": "Poetics", "options": ["Republic", "Poetics", "On the Sublime", "The Arte of English Poesie"], "type": "Practice MCQ"}, {"id": 107, "question": "Orientalism was written by:", "answer": "Edward Said", "options": ["Homi Bhabha", "Edward Said", "Spivak", "Foucault"], "type": "Practice MCQ"}, {"id": 108, "question": "The Guide was written by:", "answer": "R. K. Narayan", "options": ["Mulk Raj Anand", "Raja Rao", "R. K. Narayan", "Vikram Seth"], "type": "Practice MCQ"}, {"id": 109, "question": "Waiting for Godot is by:", "answer": "Samuel Beckett", "options": ["Harold Pinter", "Samuel Beckett", "Eugene O'Neill", "Arthur Miller"], "type": "Practice MCQ"}, {"id": 110, "question": "The Great Gatsby was written by:", "answer": "F. Scott Fitzgerald", "options": ["Fitzgerald", "Hemingway", "Faulkner", "Steinbeck"], "type": "Practice MCQ"}, {"id": 111, "question": "The phrase 'touchstone method' is associated with:", "answer": "Matthew Arnold", "options": ["T. S. Eliot", "Matthew Arnold", "I. A. Richards", "Cleanth Brooks"], "type": "Practice MCQ"}, {"id": 112, "question": "The Canterbury Tales is associated with:", "answer": "Geoffrey Chaucer", "options": ["Geoffrey Chaucer", "John Gower", "William Langland", "Thomas Malory"], "type": "Practice MCQ"}, {"id": 113, "question": "Doctor Faustus is by:", "answer": "Christopher Marlowe", "options": ["Ben Jonson", "Christopher Marlowe", "Thomas Kyd", "John Webster"], "type": "Practice MCQ"}, {"id": 114, "question": "The Rape of the Lock is by:", "answer": "Alexander Pope", "options": ["Dryden", "Pope", "Swift", "Johnson"], "type": "Practice MCQ"}, {"id": 115, "question": "Mrs Dalloway is by:", "answer": "Virginia Woolf", "options": ["Virginia Woolf", "Doris Lessing", "George Eliot", "Jean Rhys"], "type": "Practice MCQ"}, {"id": 116, "question": "A Room of One's Own is by:", "answer": "Virginia Woolf", "options": ["Virginia Woolf", "Elaine Showalter", "Simone de Beauvoir", "Kate Millett"], "type": "Practice MCQ"}, {"id": 117, "question": "The Death of the Author is associated with:", "answer": "Roland Barthes", "options": ["Derrida", "Barthes", "Foucault", "Said"], "type": "Practice MCQ"}, {"id": 118, "question": "Can the Subaltern Speak? is associated with:", "answer": "Gayatri Chakravorty Spivak", "options": ["Spivak", "Showalter", "Butler", "Bhabha"], "type": "Practice MCQ"}, {"id": 119, "question": "The Second Coming is by:", "answer": "W. B. Yeats", "options": ["Eliot", "Yeats", "Auden", "Pound"], "type": "Practice MCQ"}, {"id": 120, "question": "Beloved is by:", "answer": "Toni Morrison", "options": ["Toni Morrison", "Alice Walker", "Zora Neale Hurston", "Maya Angelou"], "type": "Practice MCQ"}];
